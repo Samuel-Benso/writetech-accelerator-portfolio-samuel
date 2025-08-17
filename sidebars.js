@@ -25,7 +25,7 @@ const sidebars = {
       type: 'doc',
       label: 'Overview',
       id: 'intro',
-    },
+    }
   ],
   toolingSidebar: [
     {
