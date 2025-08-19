@@ -6,8 +6,6 @@ tags: [docusaurus, documentation, troubleshooting, beginner]
 
 <!-- truncate -->
 
-![Samuel Benson](/img/docusaurus-plushie-banner.jpg)
-
 
 Starting with Docusaurus for documentation can be exciting, but it’s normal to face a few bumps along the way. Here’s a practical guide to help beginners overcome common challenges and get their site running smoothly.
 
