@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Zainab’s Technical Writing Portfolio',
+  title: 'Samuel’s Technical Writing Portfolio',
   tagline: 'My portfolio for the WriteTech Accelerator Program, showcasing projects from each module and final deliverables.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-16x16.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -81,10 +81,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Zaycodes',
+        title: 'Samuel Benson',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/favicon-32x32.png',
         },
         items: [
           {
@@ -99,15 +99,15 @@ const config = {
             position: 'left',
             label: 'Docs Tooling',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiSidebar',
-            position: 'left',
-            label: 'API Documentation',
-          },
+          //{
+           // type: 'docSidebar',
+           // sidebarId: 'apiSidebar',
+           // position: 'left',
+           // label: 'API Documentation',
+          //},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/WriteTech-Hub/writetech-accelerator-portfolio-zainab',
+            href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
             label: 'GitHub',
             position: 'right',
           },
@@ -120,7 +120,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'About Me',
                 to: '/docs/intro',
               },
             ],
@@ -138,7 +138,7 @@ const config = {
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/SamyD41082',
               },
             ],
           },
@@ -151,12 +151,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/WriteTech-Hub/writetech-accelerator-portfolio-zainab',
+                href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Built by Zainab Daodu – WriteTech Accelerator Programme 2025`
+        copyright: `Copyright © ${new Date().getFullYear()} Built by Samuel Benson – WriteTech Accelerator Programme 2025`
       },
       prism: {
         theme: prismThemes.github,

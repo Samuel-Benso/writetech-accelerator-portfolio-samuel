@@ -1,21 +1,35 @@
 # Documentation Tooling Project (Docusaurus Site)
 
-This project involved auditing and improving the getting started section for [Mautic documentation](https://docs.mautic.org/en/5.2/) using Docusaurus. 
+This project involved auditing and improving the **Getting Started** section for the **JSONPlaceholder API** using **Docusaurus**. The goal was to create a clean, scalable, and user-friendly docs-as-code workflow.
 
-![Mautic Documentation](/img/documentation-tooling/mautic-doc.png)
+![JSONPlaceholder Documentation](/img/documentation-tooling/jsonplaceholder.png)
 
 ## Improved Pages
-...
 
-## What I Improved
-- [Example improvement 1]
-- [Example improvement 2]
-- [Example improvement 3]
+- **intro.md** – Provides an overview of JSONPlaceholder and its endpoints.
+- **getting-started.md** – Step-by-step installation/setup guide, improved for clarity.
+- **api-overview.md** – Highlights 1–2 endpoints with examples and explanations.
+
+:::success Improvements Implemented
+- ✅ **Clearer Steps:** Rewrote long and confusing paragraphs into short, actionable instructions.  
+- ✅ **Navigation & Sidebar:** Organized pages so users can easily find setup instructions and API info.  
+- ✅ **UI Enhancements:** Added callouts for tips, accordion sections for optional details, and suggested spots for screenshots.  
+- ✅ **Code Examples:** Added runnable examples for JSONPlaceholder endpoints using `fetch` and `curl`.  
+:::
 
 ## Challenges
-- [Challenge 1]
-- [Challenge 2]
+
+- Structuring documentation for scalability while keeping it beginner-friendly.  
+- Choosing the best way to integrate UI components like callouts and accordions without cluttering the page.  
 
 ## What I Learnt
-- [Key takeaway 1]
-- [Key takeaway 2]
+
+- How to implement a **Docs-as-Code workflow** using Docusaurus.  
+- Best practices for **API documentation** including examples, callouts, and step-by-step guidance.  
+- How to make documentation visually engaging while maintaining clarity and usability.
+
+---
+
+:::tip
+This project is part of my ongoing WriteTech Accelerator portfolio. Screenshots, additional endpoints, and enhancements will continue to be added as I develop this project further.
+:::

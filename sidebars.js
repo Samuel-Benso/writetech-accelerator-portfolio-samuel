@@ -35,10 +35,10 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Mautic',
+      label: 'JSONPlaceholder',
       link: {
         type: 'doc',
-        id: 'documentation-tooling/mautic-overview'
+        id: 'documentation-tooling/JSONPlaceholder-overview'
       },
       items: [
         'documentation-tooling/getting-started',
@@ -46,7 +46,8 @@ const sidebars = {
           type: 'category',
           label: 'API Reference',
           items: [
-            'documentation-tooling/api-reference/get-user'
+            'documentation-tooling/api-reference/get-user',
+            'documentation-tooling/api-reference/post',
           ],
         }
       ],
