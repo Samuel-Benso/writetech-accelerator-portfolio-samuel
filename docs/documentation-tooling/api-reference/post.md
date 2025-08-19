@@ -1,20 +1,24 @@
+---
+id: post
+title: Create Post
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# GET /users
-
-Retrieve details of a specific user by their ID.
-
+Create a new post by sending a POST request with the required fields.
 
 ## Endpoint
-`GET https://jsonplaceholder.typicode.com/users/{id}`
 
-## Parameters
+`POST https://jsonplaceholder.typicode.com/posts`
 
-| Name | Type   | Required | Description                |
-|------|--------|----------|----------------------------|
-| id   | number | ✅        | The unique ID of the user. |
+## Request Body Fields
 
+| Name    | Type    | Required | Description         |
+|---------|---------|----------|---------------------|
+| title   | string  | ✅        | Title of the post   |
+| body    | string  | ✅        | Content of the post |
+| userId  | number  | ✅        | ID of the user      |
 
 ## 🔹 Example Requests
 
@@ -22,7 +26,13 @@ Retrieve details of a specific user by their ID.
   <TabItem value="cURL" label="cURL">
 
 ```bash
-curl https://jsonplaceholder.typicode.com/users/1
+curl -X POST https://jsonplaceholder.typicode.com/posts \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+  }'
 ```
 
   </TabItem>
@@ -30,7 +40,15 @@ curl https://jsonplaceholder.typicode.com/users/1
   <TabItem value="JavaScript" label="JavaScript (fetch)">
 
 ```javascript
-fetch("https://jsonplaceholder.typicode.com/users/1")
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    title: "foo",
+    body: "bar",
+    userId: 1
+  })
+})
   .then(res => res.json())
   .then(data => console.log(data));
 ```
@@ -42,48 +60,34 @@ fetch("https://jsonplaceholder.typicode.com/users/1")
 ```python
 import requests
 
-response = requests.get("https://jsonplaceholder.typicode.com/users/1")
+response = requests.post(
+    "https://jsonplaceholder.typicode.com/posts",
+    json={
+        "title": "foo",
+        "body": "bar",
+        "userId": 1
+    }
+)
 print(response.json())
 ```
 
   </TabItem>
 </Tabs>
 
-
 ## ✅ Successful Response
 
 ```json
 {
-  "id": 1,
-  "name": "Leanne Graham",
-  "username": "Bret",
-  "email": "Sincere@april.biz",
-  "address": {
-    "street": "Kulas Light",
-    "suite": "Apt. 556",
-    "city": "Gwenborough",
-    "zipcode": "92998-3874"
-  },
-  "phone": "1-770-736-8031 x56442",
-  "website": "hildegard.org",
-  "company": {
-    "name": "Romaguera-Crona",
-    "catchPhrase": "Multi-layered client-server neural-net",
-    "bs": "harness real-time e-markets"
-  }
+  "title": "foo",
+  "body": "bar",
+  "userId": 1,
+  "id": 101
 }
 ```
-
 
 ## ⚠️ Error Responses
 
-| Status Code | Description                             |
-| ----------- | --------------------------------------- |
-| 404         | User not found (invalid or missing ID). |
-| 500         | Internal server error.                  |
-
-```json
-{
-  "error": "User not found"
-}
-```
+| Status Code | Description                  |
+| ----------- |-----------------------------|
+| 400         | Invalid request body         |
+| 500         | Internal server
