@@ -1,19 +1,23 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
 docusaurus:
   label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+  description: Documentation powered by Docusaurus
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+documentation:
+  label: Documentation
+  description: Guides and best practices for writing documentation
+
+jsonplaceholder:
+  label: JSONPlaceholder
+  description: Fake REST API for testing and prototyping
+
+api:
+  label: API
+  description: Application Programming Interface topics
+
+troubleshooting:
+  label: Troubleshooting
+  description: Common issues and solutions
+
+beginner:
+  label: Beginner
+  description: Resources for beginners

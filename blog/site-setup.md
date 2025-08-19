@@ -1,6 +1,6 @@
 ---
 title: How I Successfully Set Up JSONPlaceholder API Documentation
-author: samuel-benson
+author: benson
 tags: [docusaurus, documentation, jsonplaceholder, api]
 ---
 
