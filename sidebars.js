@@ -38,7 +38,7 @@ const sidebars = {
       label: 'JSONPlaceholder',
       link: {
         type: 'doc',
-        id: 'documentation-tooling/JSONPlaceholder-overview'
+        id: 'documentation-tooling/jsonplaceholder-overview'
       },
       items: [
         'documentation-tooling/getting-started',
@@ -63,4 +63,5 @@ const sidebars = {
 
 };
 
-export default sidebars;
+module.exports = sidebars;
+
