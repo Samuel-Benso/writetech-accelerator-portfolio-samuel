@@ -4,30 +4,27 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'My Documentation Approach',
     Svg: require('@site/static/img/easy.svg').default,
     description: (
       <>
-        I make documentation simple and clear. Whether it is onboarding guides, API docs, or UI/UX specs, I structure content so anyone can get started quickly.
-      </>
+        I turn complex tools into clear, step-by-step guides. From API references to onboarding flows, I write so users don’t just read—they understand and act.</>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'What I Bring to the Table',
     Svg: require('@site/static/img/focus.svg').default,
     description: (
       <>
-        I handle the documentation details: structure, clarity, and usability, so teams can focus on building. Just like moving files into a docs folder, I make sure content fits seamlessly into the workflow.
-      </>
+        I do the heavy lifting on clarity, structure, and usability. Your team ships faster while I make sure the docs fit smoothly into the workflow. </>
     ),
   },
   {
-    title: 'Powered by Experience',
+    title: 'Why Teams Trust My Docs',
     Svg: require('@site/static/img/code.svg').default,
     description: (
       <>
-        With a background in React-based tools and modern doc frameworks, I extend and customize documentation systems while keeping consistency across headers, footers, and overall style.
-      </>
+       I blend technical know-how with clean design. With experience in React and modern doc frameworks, I build systems that stay consistent, scalable, and user-friendly. </>
     ),
   },
 ];
