@@ -1,11 +1,41 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
+  background: var(--ifm-background-color); /* Use Docusaurus background variable for light mode */
+  border-top: 1px solid var(--ifm-color-gray-200); /* Add a subtle separator */
+}
+
+/* Adapt .features background for dark mode (if different from default Docusaurus background) */
+[data-theme='dark'] .features {
+    background: var(--ifm-background-color); /* Docusaurus default dark background */
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 120px;
+  width: 120px;
+  margin-bottom: 1rem;
+  /* Use a shade of Spotify green for the SVG fill */
+  fill: #2EDC66; /* A lighter shade of Spotify green */
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.featureSvg:hover {
+  transform: scale(1.1);
+  /* Use Spotify green on hover */
+  fill: #1DB954; /* Spotify Green */
+}
+
+h3 {
+  /* Use Spotify green for headings */
+  color: #1DB954; /* Spotify Green */
+  font-weight: 700;
+}
+
+p {
+  /* Use Docusaurus's base font color for excellent readability in both modes */
+  color: var(--ifm-font-color-base);
+  font-size: 1.2rem;
+  line-height: 1.6; /* Improve readability of long paragraphs */
 }

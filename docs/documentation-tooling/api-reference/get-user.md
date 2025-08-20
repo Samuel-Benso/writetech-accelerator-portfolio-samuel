@@ -19,7 +19,7 @@ Retrieve details of a specific user by their ID.
 | id   | number | ✅        | The unique ID of the user. |
 
 
-## 🔹 Example Requests
+## Example Requests
 
 <Tabs>
   <TabItem value="cURL" label="cURL">
@@ -53,7 +53,7 @@ print(response.json())
 </Tabs>
 
 
-## ✅ Successful Response
+## Successful Response
 
 ```json
 {
@@ -78,7 +78,7 @@ print(response.json())
 ```
 
 
-## ⚠️ Error Responses
+## Error Responses
 
 | Status Code | Description                             |
 | ----------- | --------------------------------------- |

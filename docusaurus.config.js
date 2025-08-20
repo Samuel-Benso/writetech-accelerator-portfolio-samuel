@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Samuel’s Technical Writing Portfolio',
-  tagline: 'My portfolio for the WriteTech Accelerator Program, showcasing projects from each module and final deliverables.',
+  title: 'Samuel Benson',
+  tagline: 'Technical Writer & Software Engineer \n  My portfolio for the WriteTech Accelerator Program, showcasing projects from each module and final deliverables.',
   favicon: 'img/favicon-16x16.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

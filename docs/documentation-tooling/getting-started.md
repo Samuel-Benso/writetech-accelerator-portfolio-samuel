@@ -1,3 +1,7 @@
+---
+id: getting-started
+title: Getting Started
+---
 
 # Getting Started
 
@@ -71,15 +75,14 @@ print(response.json())
 ```
 
 
-## Next Steps
+:::sucess Next Steps
 
 * Explore the available resources:
 
-  * [Posts](./posts.md)
-  * [Comments](./comments.md)
-  * [Users](./users.md)
+  * [Users](./api-reference/get-user.md)
+  * [Posts](./api-reference/post.md)
 * Learn how to create, update, and delete resources with fake data.
-
+:::
 ---
 
 That’s it! You’re up and running with JSONPlaceholder. 

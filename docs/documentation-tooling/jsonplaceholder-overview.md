@@ -102,6 +102,7 @@ print(response.json())
 * Mocking data in UI components.
 
 
+:::success
 Now you’re ready to start making requests to JSONPlaceholder!
-
+:::
 ```

@@ -20,7 +20,7 @@ Create a new post by sending a POST request with the required fields.
 | body    | string  | ✅        | Content of the post |
 | userId  | number  | ✅        | ID of the user      |
 
-## 🔹 Example Requests
+## Example Requests
 
 <Tabs>
   <TabItem value="cURL" label="cURL">
@@ -74,7 +74,7 @@ print(response.json())
   </TabItem>
 </Tabs>
 
-## ✅ Successful Response
+## Successful Response
 
 ```json
 {
@@ -85,7 +85,7 @@ print(response.json())
 }
 ```
 
-## ⚠️ Error Responses
+## Error Responses
 
 | Status Code | Description                  |
 | ----------- |-----------------------------|

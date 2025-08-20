@@ -1,30 +1,46 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Primary theme color (light & dark share this) - Spotify Green */
+  --ifm-color-primary: #1DB954; /* Spotify Green */
+  --ifm-color-primary-dark: #1A9E4A; /* Slightly darker */
+  --ifm-color-primary-darker: #178340; /* Even darker */
+  --ifm-color-primary-darkest: #146836; /* Darkest */
+  --ifm-color-primary-light: #2EDC66; /* Slightly lighter */
+  --ifm-color-primary-lighter: #3EEF7A; /* Even lighter */
+  --ifm-color-primary-lightest:#4EFD8F; /* Lightest */
+
+  /* Docusaurus standard base font color for light mode */
+  --ifm-font-color-base: #333333; /* Dark grey for excellent readability on light backgrounds */
+  /* Docusaurus standard secondary font color for light mode (optional, for less prominent text) */
+  --ifm-font-color-secondary: #555555;
+
+  /* Make text white for cards/homepage hero (assuming a dark background for hero section) */
+  --homepage-text: #ffffff;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Use the same Spotify green shades in dark mode for primary elements */
+  --ifm-color-primary: #1DB954;
+  --ifm-color-primary-dark: #1A9E4A;
+  --ifm-color-primary-darker: #178340;
+  --ifm-color-primary-darkest: #146836;
+  --ifm-color-primary-light: #2EDC66;
+  --ifm-color-primary-lighter: #3EEF7A;
+  --ifm-color-primary-lightest: #4EFD8F;
+
+  /* Docusaurus standard base font color for dark mode */
+  --ifm-font-color-base: #f0f0f0; /* Light grey for excellent readability on dark backgrounds */
+  /* Docusaurus standard secondary font color for dark mode */
+  --ifm-font-color-secondary: #aaaaaa;
+
+  --homepage-text: #ffffff; /* Still white for hero text in dark mode */
+}
+
+/* Example: Apply white text to homepage component */
+.homepage-title,
+.homepage-description {
+  color: var(--homepage-text);
+}
+
+.hero__subtitle {
+  white-space: pre-line; /* respects \n as line breaks */
 }
