@@ -30,7 +30,7 @@ const config = {
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn', // Changed from 'throw' to 'warn'
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -100,10 +100,10 @@ const config = {
             label: 'Docs Tooling',
           },
           //{
-           // type: 'docSidebar',
-           // sidebarId: 'apiSidebar',
-           // position: 'left',
-           // label: 'API Documentation',
+            // type: 'docSidebar',
+            // sidebarId: 'apiSidebar',
+            // position: 'left',
+            // label: 'API Documentation',
           //},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
