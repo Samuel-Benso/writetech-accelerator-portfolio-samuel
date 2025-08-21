@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Technical Writer & Software Engineer',
   tagline: 'This is my portfolio for the WriteTech Accelerator Program, showcasing projects from each module and final deliverables.',
-  favicon: 'img/favicon-16x16.png',
+  favicon: 'img/favicon-32x32.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -99,13 +99,19 @@ const config = {
             position: 'left',
             label: 'Docs Tooling',
           },
-          //{
-            // type: 'docSidebar',
-            // sidebarId: 'apiSidebar',
-            // position: 'left',
-            // label: 'API Documentation',
-          //},
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'apiSidebar',
+          //   position: 'left',
+          //   label: 'API Documentation',
+          // },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://www.notion.so/Samuel-Benson-Portfolio-231a5f1c6be08076a43ac5a54ae36a04#231a5f1c6be0815cba76efed82a5ce6c', // 🔗 replace with your Notion URL
+            label: 'Notion Portfolio',
+            position: 'right',
+            className: 'button button--primary', // ✅ makes it styled as a button
+          },
           {
             href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
             label: 'GitHub',
