@@ -1,6 +1,6 @@
 # API Documentation Project
 
-This project documents the **Chimoney public REST API**. It includes a Getting Started guide and detailed documentation for selected endpoints, all designed to be developer-friendly.
+This project documents the [**Chimoney public REST API**](https://chimoney.io/). It includes a Getting Started guide and detailed documentation for selected endpoints, all designed to be developer-friendly.
 
 ### Key Improvements
 
