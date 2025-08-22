@@ -1,12 +1,9 @@
-Got it. The `Live Link` column will be removed, and the module titles themselves will serve as the links.
-
------
 
 # My WriteTech Accelerator Portfolio
 
-Welcome\! This repository contains all my project work and deliverables from the [**WriteTech Accelerator Program**](https://writetechhub.org/accelerator-program/#:~:text=The%20WriteTech%20Accelerator%20Programme%20is%20an%20advanced%2C%20paid,and%20prepare%20for%20the%20job%20market%20with%20confidence.).
+Welcome\! This repository contains all my project work and deliverables from the [**WriteTech Accelerator Program**](https://writetechhub.org/accelerator-program/#:~:text=The%20WriteTech%20Accelerator%20Programme%20is%20an%20advanced%2C%20paid,and%20prepare%20for%20the%20job%20market%20with%20confidence).
 
-Over the course of this bootcamp, from **August to November**, I will complete technical writing projects across various domains—including API documentation, AI, DevOps, automation, and Web3. All projects listed below will be completed and deployed by the end of the program.
+Over the course of this bootcamp, from **August to November**, I will complete technical writing projects across various domains, including API documentation, AI, DevOps, automation, and Web3. All projects listed below will be completed and deployed by the end of the program.
 
 ## 👩🏽‍💻 About Me
 
