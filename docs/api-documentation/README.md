@@ -1,10 +1,5 @@
-# WriteTech Accelerator Portfolio - Samuel Benson
-
-This repository serves as my official portfolio for the WriteTech Accelerator Programme. It contains all my project deliverables, including API documentation, tooling work, and other writing samples.
-
-## About the Project
-
-The core of this portfolio is a hands-on project to document a public REST API. It demonstrates my ability to:
+# About this Project
+The core of this project is a hands-on project to document a public REST API. It demonstrates my ability to:
 
 -   Create structured, developer-friendly documentation.
 -   Use static site generators like Docusaurus.
