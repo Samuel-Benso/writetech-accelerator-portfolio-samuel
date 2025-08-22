@@ -1,0 +1,71 @@
+---
+id: send-money
+title: "Send money"
+description: "Sends a payment to a recipient."
+sidebar_label: "Send money"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1Vctu2zAQ/BViz7KtOMihOjUvFD60CfJoD65RrKl1xEQiGT6SGIL+vVhaju24SAsU0cUSudydnZ2hWwh456GYwiUuG9LBwyyDkrx0ygZlNBRwTbr0AoVdRYhgBApHUllFOgwhA0ePkXw4MeUSijZ9KkclFMFFykAaHUgH3kJrayWRM4/uPadvwcuKGuS3sLQEBZj5PcnQ510lmgI2JmpelNE50nKZ9nsQDNo6Y8kFRT4VWoVvkurYzMlBBvSCja0JiqO828q2ifTBKX23HQm312fQbdf7Q/QuaecNqjoTtjKaMmGciFo9RhLRkxOqJB3UQu3iAd773H8OpWlWJRfEAOnvJU9rhjbwkTmmUrweFQvjRHAoH972Nfn2fTDOx0eDPM8PoOu6181EInETV9tN+9g06Ja9KlgKKQYyeMI60jbzR/k2u4nCHQb3293pdh9bgufIW6P9Ct84z/lnl4ZeyAKlJBuohP8Q4K6mgkPtUfLZSfm+YMLLr094OJ6XBwueog8Yon//iCVd8lqXfYR41/w1FCpTcjnjU4cYKihg1JvbjzxppsyTeyLHN0ML0dVQQBWC9cVohFYNZaUao2k5VGb0dADdLAMm82pzD5yvy3+YIDJQemFS6yqkRk97VOKMGiOOLycsS3J+pYuDYT7M90yTQi8s6ePLifCWZDKLNS4sTK2MsNFZ48kPxUTLOpbkxaEgXVqjdPCFGIjTiuSD+IF1TUGcYI3suIFI/via4AzEFwriZqMecZ308FNzFzyIBpMQNTa0tlbq5C3cdiPlf7iWe0kEegkjW6NK5dIw237uU1jPPY1cl3yRVqyMYgptO0dPt67uOl5+jMTGn87Y607hnDmfzroMKsKSXJLKA/FoT1cgBzcM4PVq2Pdel61PHCezvhs72xLv5cX1DWQw7/9wGlPyGYfPLBl8hgIgA5NIS65Lay3UqO8i3nHsKic/vwHdoWOY
+sidebar_class_name: "post api-method"
+info_path: docs/api/chimoney/chimoney-demo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Send money"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/payments/send"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Sends a payment to a recipient.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"type":"object","required":["amount","currency","recipient"],"properties":{"amount":{"type":"number","example":50},"currency":{"type":"string","example":"USD"},"recipient":{"type":"string","description":"Email, phone, or unique user identifier","example":"user@example.com"},"reference":{"type":"string","description":"Client-supplied reference for tracking","example":"INV-2025-0001"}}},"examples":{"emailRecipient":{"summary":"Send to email","value":{"amount":50,"currency":"USD","recipient":"user@example.com","reference":"INV-2025-0001"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Payment accepted","content":{"application/json":{"schema":{"type":"object","properties":{"transactionId":{"type":"string","example":"tx_9a32bd1f"},"status":{"type":"string","example":"pending"},"amount":{"type":"number","example":50},"currency":{"type":"string","example":"USD"}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

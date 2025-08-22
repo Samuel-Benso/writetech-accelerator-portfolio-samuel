@@ -1,0 +1,134 @@
+openapi: 3.0.0
+info:
+  title: Chimoney Demo API
+  version: 1.0.0
+  description: >
+    Demo OpenAPI spec for portfolio purposes. Includes 3 endpoints:
+    - Check Wallet Balance
+    - Send Money
+    - Get Transaction Status
+
+servers:
+  - url: https://api.chimoney.io/v1
+
+tags:
+  - name: Wallet
+  - name: Payments
+  - name: Transactions
+
+paths:
+  /wallet/balance:
+    get:
+      tags: [Wallet]
+      summary: Check wallet balance
+      description: Returns the current balance of the wallet.
+      responses:
+        '200':
+          description: Wallet balance retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  balance:
+                    type: number
+                    example: 125.75
+                  currency:
+                    type: string
+                    example: USD
+
+  /payments/send:
+    post:
+      tags: [Payments]
+      summary: Send money
+      description: Sends a payment to a recipient.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [amount, currency, recipient]
+              properties:
+                amount:
+                  type: number
+                  example: 50
+                currency:
+                  type: string
+                  example: USD
+                recipient:
+                  type: string
+                  description: Email, phone, or unique user identifier
+                  example: user@example.com
+                reference:
+                  type: string
+                  description: Client-supplied reference for tracking
+                  example: INV-2025-0001
+            examples:
+              emailRecipient:
+                summary: Send to email
+                value:
+                  amount: 50
+                  currency: USD
+                  recipient: user@example.com
+                  reference: INV-2025-0001
+      responses:
+        '200':
+          description: Payment accepted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transactionId:
+                    type: string
+                    example: tx_9a32bd1f
+                  status:
+                    type: string
+                    example: pending
+                  amount:
+                    type: number
+                    example: 50
+                  currency:
+                    type: string
+                    example: USD
+
+  /transactions/{id}:
+    get:
+      tags: [Transactions]
+      summary: Get transaction status
+      description: Retrieves the status and details of a transaction by ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: The transaction ID returned from send money
+          example: tx_9a32bd1f
+      responses:
+        '200':
+          description: Transaction found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  transactionId:
+                    type: string
+                    example: tx_9a32bd1f
+                  status:
+                    type: string
+                    example: completed
+                  amount:
+                    type: number
+                    example: 50
+                  currency:
+                    type: string
+                    example: USD
+                  createdAt:
+                    type: string
+                    format: date-time
+                    example: 2025-08-19T12:00:00Z
+        '404':
+          description: Transaction not found

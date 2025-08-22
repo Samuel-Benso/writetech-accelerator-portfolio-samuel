@@ -1,41 +1,26 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Technical Writer & Software Engineer',
-  tagline: 'This is my portfolio for the WriteTech Accelerator Program, showcasing projects from each module and final deliverables.',
+  tagline:
+    'This is my portfolio for the WriteTech Accelerator Program, showcasing projects from each module and final deliverables.',
   favicon: 'img/favicon-32x32.png',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'facebook', // Update this later for deployment
+  projectName: 'docusaurus', // Update this later for deployment
 
-  onBrokenLinks: 'ignore', // Changed from 'warn' to 'ignore'
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -48,8 +33,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          docItemComponent: '@theme/ApiItem', // 🔑 Required for OpenAPI theme
           editUrl:
             'https://github.com/WriteTech-Hub/writetech-accelerator-portfolio-zainab',
         },
@@ -59,11 +43,8 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/WriteTech-Hub/writetech-accelerator-portfolio-zainab',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -75,100 +56,121 @@ const config = {
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'Samuel Benson',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/favicon-32x32.png',
+  // ✅ OpenAPI Plugin + Theme
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'chimoney',
+        docsPluginId: 'classic',
+        config: {
+          chimoney: {
+            // 👇 point to your spec (already correct)
+            specPath: 'docs/api-documentation/api-reference/chimoney-spec.yaml',
+            // 👇 generate into the chimoney folder
+            outputDir: 'docs/api-documentation/api-reference/chimoney',
+            sidebarOptions: {
+              groupPathsBy: 'tag',
+            },
+          },
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'profileSidebar',
-            position: 'left',
-            label: 'Overview',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'toolingSidebar',
-            position: 'left',
-            label: 'Docs Tooling',
-          },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'apiSidebar',
-          //   position: 'left',
-          //   label: 'API Documentation',
-          // },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://www.notion.so/Samuel-Benson-Portfolio-231a5f1c6be08076a43ac5a54ae36a04#231a5f1c6be0815cba76efed82a5ce6c', // 🔗 replace with your Notion URL
-            label: 'Notion Portfolio',
-            position: 'right',
-            className: 'button button--primary', // ✅ makes it styled as a button
-          },
-          {
-            href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'About Me',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/SamyD41082',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Built by Samuel Benson – WriteTech Accelerator Programme 2025`
+    ],
+  ],
+
+  themes: ['docusaurus-theme-openapi-docs'], // 🔑 Required for API theme
+
+  themeConfig: {
+    image: 'img/docusaurus-social-card.jpg',
+    navbar: {
+      title: 'Samuel Benson',
+      logo: {
+        alt: 'Samuel Benson headshot',
+        src: 'img/favicon-32x32.png',
       },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'profileSidebar',
+          position: 'left',
+          label: 'Overview',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'toolingSidebar',
+          position: 'left',
+          label: 'Docs Tooling',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiSidebar', // 👈 this now matches sidebars.js
+          position: 'left',
+          label: 'Chimoney API',
+        },
+        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          href: 'https://www.notion.so/Samuel-Benson-Portfolio-231a5f1c6be08076a43ac5a54ae36a04#231a5f1c6be0815cba76efed82a5ce6c',
+          label: 'Notion Portfolio',
+          position: 'right',
+          className: 'button button--primary',
+        },
+        {
+          href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'About Me',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'X',
+              href: 'https://x.com/SamyD41082',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Built by Samuel Benson – WriteTech Accelerator Programme 2025`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
 };
 
 export default config;

@@ -1,0 +1,71 @@
+---
+id: get-transaction-status
+title: "Get transaction status"
+description: "Retrieves the status and details of a transaction by ID."
+sidebar_label: "Get transaction status"
+hide_title: true
+hide_table_of_contents: true
+api: eJylVE1v2zAM/SsCTxvgJE7aAqtvWTMUOQwr2g4DlgUDI9G1WltSJTpoYPi/D3K81U27AMN8sT4eyUfyiQ0w3gXIVnDr0QSUrK0JsE5AUZBeu7iHDK6JvaYtBcEFicDIdRBolFDEqMsgbC5Q8LMPsdmJ5WIMCTj0WBGTj2Ea0NGdQy4gAYMVQQZaQQKeHmvtSUHGvqYEgiyoQsga4J2LqMBemztoD6ndFvQi8HIhPHHtDSmRe1uJQEaJyhraQQL0hJUroz9++nmOJ7ONmubQriOB4KwJFGLMWZrG30GkQZTc1ibSltYwGY5gdK7UEuP15D5Ei+Z1FnZzT5JjWbx15Fnv4w0SWKrXSf+VdwL7Xhw3kTYumFQ0wMrWe8K9gamrDfmhwVnaJiBr78nI3XHXX28W0an0hExqzm+hc+srZMhAIdOIdUUvXMzS2dko/TCant9OZ1maZmn6HdruS+A0PT3eCGO5b0aEV8SFVZDBHXVFjjrLYDIob5g0WrWQQCC//S3K2peQQcHsQjaZoNNjWehOMmNtJ9tpJxBtctulp7njfdFDxIIqK+ZXS0ggetxznI7TcQqHYu2gXxyZ+dVSBEdS5NYLZz3nttRWuNo7GyiMxdLIslYUxIkgo5zVhkMmRuKiIPkgvmFZEouPWKKRJEbiJor8c0dnJC6JxbBGN51GfpjYKWcDV9iJs39+ET18QL2iDqg3z1L/n2nQa4PpiSeuRN1x6srf9N1aDR9DpJFpFQdSYQPH26bZYKCvvmzbePxYk99BtlonsEWvcRN7s2pA6RDXCrIcy0BHsnl33Y+e9+LfZsmbufSHaCJii2Udd5DAA+32o65dtwkUhIp8R3R/MZeSHA9MXk2TKME/8r78dAtt+wvewvUY
+sidebar_class_name: "get api-method"
+info_path: docs/api/chimoney/chimoney-demo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get transaction status"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/transactions/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieves the status and details of a transaction by ID.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"path","name":"id","required":true,"schema":{"type":"string"},"description":"The transaction ID returned from send money","example":"tx_9a32bd1f"}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Transaction found","content":{"application/json":{"schema":{"type":"object","properties":{"transactionId":{"type":"string","example":"tx_9a32bd1f"},"status":{"type":"string","example":"completed"},"amount":{"type":"number","example":50},"currency":{"type":"string","example":"USD"},"createdAt":{"type":"string","format":"date-time","example":"2025-08-19T12:00:00Z"}}}}}},"404":{"description":"Transaction not found"}}}
+>
+  
+</StatusCodes>
+
+
+      
