@@ -1,6 +1,6 @@
 ---
 title: Navigating Docusaurus Setup Challenges as a Beginner
-author: benson
+author: samuel-benson
 tags: [docusaurus, documentation, troubleshooting, beginner]
 ---
 

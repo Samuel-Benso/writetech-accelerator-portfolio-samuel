@@ -1,6 +1,6 @@
 ---
 title: How to document your API with Docusaurus OpenAPI plugin
-author: benson
+author: samuel-benson
 tags: [docusaurus, documentation, jsonplaceholder, api]
 ---
 
