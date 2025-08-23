@@ -40,7 +40,7 @@ Your API key is required to authenticate requests. To generate one:
 3. Give the app a name (e.g., *My Test App*).  
 4. A unique **API key** will be generated for that app.  
 
-![API Key](/img/chi4.png)
+![API Key](/img/chimoneyf.png)
 
 ⚠️ **Important:** Keep your API key private. Anyone with it can act on behalf of your account.
 
