@@ -1,3 +1,9 @@
+---
+id: getting-started
+title: Getting Started
+---
+
+
 # Getting Started
 
 This guide helps you quickly get started with the Chimoney API using the **Sandbox environment**. You’ll learn how to create a developer account, generate your API key, and make your first API call.  
