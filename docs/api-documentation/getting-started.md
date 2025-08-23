@@ -19,7 +19,7 @@ To test the Chimoney API safely without spending real money, you’ll use the **
 
 Once verified, you’ll be redirected to your **dashboard**.
 
-![Sandbox](/img/chi1.png)
+![Sandbox](/img/chimoney.png)
 
 ## 2. Explore Your Sandbox Wallets
 
@@ -40,7 +40,7 @@ Your API key is required to authenticate requests. To generate one:
 3. Give the app a name (e.g., *My Test App*).  
 4. A unique **API key** will be generated for that app.  
 
-![Sandbox](/img/chi4.png)
+![API Key](/img/chi4.png)
 
 ⚠️ **Important:** Keep your API key private. Anyone with it can act on behalf of your account.
 

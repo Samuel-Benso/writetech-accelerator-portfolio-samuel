@@ -21,3 +21,23 @@ troubleshooting:
 beginner:
   label: Beginner
   description: Resources for beginners
+
+seo:
+  label: SEO
+  description: Search Engine Optimization techniques and tips
+
+blogging:
+  label: Blogging
+  description: Tips and tricks for successful blogging  
+
+google ranking:
+  label: Google Ranking
+  description: Strategies for improving your website's ranking on Google
+
+content writing:
+  label: Content Writing
+  description: Best practices for writing engaging and effective content
+
+openapi:
+  label: OpenAPI
+  description: API documentation and design using OpenAPI specifications
