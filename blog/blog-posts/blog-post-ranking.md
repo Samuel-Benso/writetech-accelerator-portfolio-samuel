@@ -1,11 +1,11 @@
 ---
 slug: how-to-rank-blog-posts-on-google
-title: How to Make Your Blog Post Rank on Google
+title: How to Rank Your Blog Post on Google
 authors: samuel-benson
 tags: [seo, blogging, google ranking, content writing, docusaurus]
-description: Learn practical SEO techniques to make your blog posts rank higher on Google. This guide covers keyword research, on-page SEO, internal linking, meta descriptions, and more with clear steps and examples.
+description: This guide covers keyword research, on-page SEO, internal linking, meta descriptions, and more with clear steps and examples.
 keywords: [how to rank blog post on google, seo for beginners, blog seo tips, rank higher on google, content optimization, on-page seo]
-image: /img/seo-blog-ranking.png
+image: /img/seo-openapi-guide.png
 ---
 
 <!-- truncate -->
@@ -15,10 +15,8 @@ Publishing a blog is one thing. Making it show up on Google search is another. I
 
 ## Start with Keyword Research
 
-Before writing, you need to know what people are searching for. This is where **keywords** come in.
-
-* **What it means:** Keywords are the exact words people type on Google when searching for something.
-* **Example:** If you write about “Docusaurus sidebars,” people may search for “how to add sidebar in Docusaurus” or “Docusaurus config file example.”
+Before writing, you need to know what people are searching for. This is where **keywords** come in. Keywords are the exact words people type on Google when searching for something.
+If you write about “Docusaurus sidebars,” people may search for “how to add sidebar in Docusaurus” or “Docusaurus config file example.”
 
 **How to do it:**
 
@@ -26,8 +24,9 @@ Before writing, you need to know what people are searching for. This is where **
 2. Find keywords with medium search volume but low competition.
 3. Pick one **main keyword** and a few **related keywords** to use in your blog.
 
-**Tip:** Place your main keyword in your title, intro paragraph, and meta description.
-
+:::tip 
+Place your main keyword in your title, intro paragraph, and meta description.
+:::
 
 ## Write High-Quality Content
 
@@ -111,7 +110,7 @@ You can’t improve what you don’t measure.
 This helps you know what’s working and what to fix.
 
 
-## COnclusion
+## Conclusion
 
 Ranking on Google is not magic. It’s about writing useful content and making it easy for Google to find and understand. Start with keyword research, write clear posts, optimize for SEO, and promote your work. Over time, your blog will gain authority, and your posts will start climbing the search results.
 

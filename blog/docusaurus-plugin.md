@@ -1,14 +1,16 @@
 ---
-title: How to document your API with Docusaurus OpenAPI plugin
+slug: how-to-use-docusaurus-openapi-plugin
+title: How to Use Docusaurus OpenAPI plugin
 author: samuel-benson
 tags: [docusaurus, documentation, jsonplaceholder, api]
+description: This guide covers keyword research, on-page SEO, internal linking, meta descriptions, and more with clear steps and examples.
+keywords: [how to rank blog post on google, seo for beginners, blog seo tips, rank higher on google, content optimization, on-page seo]
+image: /img/seo-openapi-guide.png
 ---
 
 <!-- truncate -->
 
 If you keep API docs in sync by hand, you will eventually fall behind. The OpenAPI plugin for Docusaurus reads a single OpenAPI file and generates clean pages with paths, parameters, request bodies, responses, and schema details. This guide shows every step you need to go from zero to a working API reference inside a Docusaurus site, with examples you can paste into your project.
-
----
 
 ## Create or open a Docusaurus site
 
@@ -214,7 +216,6 @@ This writes Markdown and a small `sidebar.ts` file into `docs/api-documentation/
 
 Tip for Windows PowerShell: do not split the command across lines with backslashes. Use one line exactly as shown.
 
----
 
 ## Expose the new sidebar in `sidebars.js`
 
