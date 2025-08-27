@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print GitHub Username and Repo
-        run: echo "GitHub User: ${{ github.actor }}, Repo: ${{ github.repository }}"
+        run: 'echo "GitHub User: ${{ github.actor }}, Repo: ${{ github.repository }}"'
 
       - name: Print Vale Installation Confirmation
         run: echo "Vale was installed on my machine."
