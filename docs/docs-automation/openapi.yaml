@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: Chimoney API
+  description: API for payments and payouts with Chimoney
+  version: 1.0.0
+servers:
+  - url: https://api.chimoney.io/v0.2
+paths:
+  /info:
+    get:
+      summary: Get API info
+      description: Returns metadata about the Chimoney API.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Chimoney API is running"

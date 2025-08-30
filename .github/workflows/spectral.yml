@@ -1,0 +1,31 @@
+name: Spectral Lint & Redocly
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  api-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Spectral
+        run: npm install -g @stoplight/spectral-cli
+
+      - name: Lint OpenAPI files
+        run: spectral lint docs/docs-automation/openapi.yaml
+
+      - name: Install Redocly CLI
+        run: npm install -g @redocly/cli
+
+      - name: Build API reference docs
+        run: redocly build-docs docs/docs-automation/openapi.yaml -o docs/docs-automation/api-docs.html

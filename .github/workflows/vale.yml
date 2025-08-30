@@ -1,0 +1,27 @@
+name: Vale Lint
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Vale
+        run: |
+          curl -fsSL https://install.goreleaser.com/github.com/errata-ai/vale.sh | sh
+          sudo mv bin/vale /usr/local/bin/
+
+      - name: Run Vale on Markdown
+        run: vale docs/**/*.md
+
+      - name: Run Broken Link Checker
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --verbose --no-progress docs/**/*.md

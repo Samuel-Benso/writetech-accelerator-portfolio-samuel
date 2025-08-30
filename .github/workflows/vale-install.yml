@@ -13,4 +13,4 @@ jobs:
         run: 'echo "GitHub User: ${{ github.actor }}, Repo: ${{ github.repository }}"'
 
       - name: Print Vale Installation Confirmation
-        run: echo "Vale was installed on my machine."
+        run: 'echo "Vale was installed on my machine."'
