@@ -15,8 +15,10 @@ jobs:
 
       - name: Install Vale
         run: |
-          curl -fsSL https://install.goreleaser.com/github.com/errata-ai/vale.sh | sh
-          sudo mv bin/vale /usr/local/bin/
+          curl -fsSL https://github.com/errata-ai/vale/releases/latest/download/vale_Linux_64-bit.tar.gz -o vale.tar.gz
+          tar -xzf vale.tar.gz
+          sudo mv vale /usr/local/bin/
+
 
       - name: Run Vale on Markdown
         run: vale docs/**/*.md
