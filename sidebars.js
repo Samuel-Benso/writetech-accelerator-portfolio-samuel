@@ -37,7 +37,7 @@ const sidebars = {
     },
   ],
 
-  // ✅ This is the corrected section for your Chimoney API docs.
+  // This is the section for Chimoney API docs.
   apiSidebar: [
     {
       type: 'doc',
@@ -66,6 +66,20 @@ const sidebars = {
       ],
     },
   ],
+// The Linter Tab
+linterSidebar: [
+    {
+      type: 'doc',
+      label: 'Introduction',
+      id: 'docs-automation/intro',
+    },
+    {
+      type: 'link',
+      href: '/api-docs.html',
+      label: 'Redocly API Reference',
+    },
+  ],
+// This tab ends here
 };
 
 module.exports = sidebars;

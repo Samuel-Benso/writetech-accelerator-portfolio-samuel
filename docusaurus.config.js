@@ -107,6 +107,12 @@ const config = {
           position: 'left',
           label: 'Chimoney API',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'linterSidebar', // 
+          position: 'left',
+          label: 'Linters',
+        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://www.notion.so/Samuel-Benson-Portfolio-231a5f1c6be08076a43ac5a54ae36a04#231a5f1c6be0815cba76efed82a5ce6c',
