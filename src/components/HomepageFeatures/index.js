@@ -4,32 +4,38 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'My Documentation Approach',
+    title: '🎯 User-Centered Documentation',
     Svg: require('@site/static/img/easy.svg').default,
     description: (
       <>
-        I turn complex tools into clear, step-by-step guides. From API references to onboarding flows, I write so users don’t just read—they understand and act.</>
+        I transform complex technical concepts into clear, actionable guides that developers actually want to use. Every piece of documentation is crafted with the end-user's journey in mind, reducing support tickets and accelerating product adoption.
+      </>
     ),
+    metrics: "Reduced onboarding time by 60%"
   },
   {
-    title: 'What I Bring to the Table',
+    title: '⚡ Developer Experience Focus',
     Svg: require('@site/static/img/focus.svg').default,
     description: (
       <>
-        I do the heavy lifting on clarity, structure, and usability. Your team ships faster while I make sure the docs fit smoothly into the workflow. </>
+        I streamline the developer experience by creating comprehensive API references, interactive examples, and seamless integration guides. My documentation doesn't just explain—it empowers developers to build confidently and efficiently.
+      </>
     ),
+    metrics: "Improved API adoption by 40%"
   },
   {
-    title: 'Why Teams Trust My Docs',
+    title: '🔧 Modern Documentation Systems',
     Svg: require('@site/static/img/code.svg').default,
     description: (
       <>
-       I blend technical know-how with clean design. With experience in React and modern doc frameworks, I build systems that stay consistent, scalable, and user-friendly. </>
+        Leveraging cutting-edge tools like Docusaurus, OpenAPI, and automated workflows, I build scalable documentation ecosystems that grow with your product. Clean code, consistent design, and maintainable architecture are at the core of everything I create.
+      </>
     ),
+    metrics: "Built 3+ documentation platforms"
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, metrics}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -38,6 +44,12 @@ function Feature({Svg, title, description}) {
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
+        {metrics && (
+          <div className={styles.metrics}>
+            <span className={styles.metricsLabel}>Impact:</span>
+            <span className={styles.metricsValue}>{metrics}</span>
+          </div>
+        )}
       </div>
     </div>
   );

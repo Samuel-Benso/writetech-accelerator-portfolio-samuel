@@ -93,25 +93,29 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'profileSidebar',
           position: 'left',
-          label: 'Overview',
+          label: 'About Me',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'toolingSidebar',
+          type: 'dropdown',
+          label: 'Portfolio Projects',
           position: 'left',
-          label: 'Docs Tooling',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'apiSidebar', // 👈 this now matches sidebars.js
-          position: 'left',
-          label: 'Chimoney API',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'linterSidebar', // 
-          position: 'left',
-          label: 'Linters',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'toolingSidebar',
+              label: '📚 Documentation Tooling',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'apiSidebar',
+              label: '🔌 Chimoney API Docs',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'linterSidebar',
+              label: '🔧 Documentation Automation',
+            },
+          ],
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
