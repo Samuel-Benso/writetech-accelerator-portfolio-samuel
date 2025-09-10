@@ -17,8 +17,8 @@ I'm a passionate technical writer with a background in software engineering. I l
 | :--- | :--- | :--- |
 | [**Documentation Tooling & Static Site Generators**](https://writetech-accelerator-portfolio-sam.vercel.app/docs/documentation-tooling/intro) | [documentation-tooling](https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel/tree/main/docs/documentation-tooling) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
 | [**API Documentation & OpenAPI**](https://writetech-accelerator-portfolio-sam.vercel.app/docs/api-documentation/intro) | [api-documentation](https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel/tree/main/docs/api-documentation) | Improved documentation for selected endpoints from a real or public API |
-| **Documentation Automation** | [docs-automation](#) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions |
-| **AI for Documentation** | [ai-documentation](#) | Comparison of AI tools or prompt-based documentation using your own examples |
+| **Documentation Automation** | [docs-automation](https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel/tree/main/docs/docs-automation) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions |
+| **AI for Documentation** | [ai-documentation](https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel/tree/main/docs/ai-documentation) | Comparison of AI tools or prompt-based documentation using your own examples |
 | **DevOps & Cloud Documentation** | [devops-cloud-documentation](#) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
 | **Technical Writing in Web3** | [web3-documentation](#) | One of: user guide for a Web3 tool, white paper draft, or improved API doc for a Web3 platform |
 
