@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: '🎯 User-Centered Documentation',
+    title: 'User-Centered Documentation',
     Svg: require('@site/static/img/easy.svg').default,
     description: (
       <>
@@ -14,7 +14,7 @@ const FeatureList = [
     metrics: "Reduced onboarding time by 60%"
   },
   {
-    title: '⚡ Developer Experience Focus',
+    title: 'Developer Experience Focus',
     Svg: require('@site/static/img/focus.svg').default,
     description: (
       <>
@@ -24,7 +24,7 @@ const FeatureList = [
     metrics: "Improved API adoption by 40%"
   },
   {
-    title: '🔧 Modern Documentation Systems',
+    title: 'Modern Documentation Systems',
     Svg: require('@site/static/img/code.svg').default,
     description: (
       <>

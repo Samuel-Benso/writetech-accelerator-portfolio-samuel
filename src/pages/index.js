@@ -43,12 +43,12 @@ function HomepageHeader() {
               <Link
                 className="button button--secondary button--lg"
                 to="/docs/intro">
-                📖 View Portfolio
+                View Portfolio
               </Link>
               <Link
                 className="button button--outline button--secondary button--lg"
                 to="/blog">
-                ✍️ Read My Blog
+                Read My Blog
               </Link>
             </div>
           </div>
@@ -63,7 +63,6 @@ function HomepageHeader() {
               </div>
               <div className={styles.profileBadge}>
                 <span className={styles.badgeText}>Available for Hire</span>
-                <span className={styles.badgeIcon}>🚀</span>
               </div>
             </div>
           </div>

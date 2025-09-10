@@ -75,11 +75,45 @@ linterSidebar: [
     },
     {
       type: 'link',
-      href: '/api-docs.html',
+      href: '/api-docs',
       label: 'Redocly API Reference',
     },
   ],
 // This tab ends here
+
+  // AI Documentation Project Tab
+  aiDocsSidebar: [
+    {
+      type: 'doc',
+      label: 'Project Overview',
+      id: 'ai-documentation/README',
+    },
+    {
+      type: 'doc',
+      label: 'Model Card',
+      id: 'ai-documentation/model_card',
+    },
+    {
+      type: 'doc',
+      label: 'Final Documentation',
+      id: 'ai-documentation/final_doc',
+    },
+    {
+      type: 'doc',
+      label: 'AI Output (Raw)',
+      id: 'ai-documentation/ai_output',
+    },
+    {
+      type: 'doc',
+      label: 'Prompts Used',
+      id: 'ai-documentation/prompt_used',
+    },
+    {
+      type: 'doc',
+      label: 'Reflection & Analysis',
+      id: 'ai-documentation/reflection',
+    },
+  ],
 };
 
 module.exports = sidebars;

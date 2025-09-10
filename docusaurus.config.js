@@ -115,6 +115,11 @@ const config = {
               sidebarId: 'linterSidebar',
               label: '🔧 Documentation Automation',
             },
+            {
+              type: 'docSidebar',
+              sidebarId: 'aiDocsSidebar',
+              label: '🤖 AI Documentation Project',
+            },
           ],
         },
         {to: '/blog', label: 'Blog', position: 'left'},

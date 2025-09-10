@@ -1,34 +1,35 @@
 import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import ResumeModal from '../ResumeModal';
 import styles from './styles.module.css';
 
 const skillsData = [
   {
     category: "Documentation Tools",
     skills: [
-      { name: "Docusaurus", level: 95, icon: "📚" },
-      { name: "Markdown", level: 98, icon: "📝" },
-      { name: "Git/GitHub", level: 90, icon: "🔧" },
-      { name: "OpenAPI/Swagger", level: 85, icon: "🔌" }
+      { name: "Docusaurus", level: 95 },
+      { name: "Markdown", level: 98 },
+      { name: "Git/GitHub", level: 90 },
+      { name: "OpenAPI/Swagger", level: 85 }
     ]
   },
   {
     category: "Technical Skills",
     skills: [
-      { name: "React", level: 80, icon: "⚛️" },
-      { name: "JavaScript", level: 85, icon: "💻" },
-      { name: "API Documentation", level: 95, icon: "🌐" },
-      { name: "Technical Writing", level: 98, icon: "✍️" }
+      { name: "React", level: 80 },
+      { name: "JavaScript", level: 85 },
+      { name: "API Documentation", level: 95 },
+      { name: "Technical Writing", level: 98 }
     ]
   },
   {
     category: "Content Strategy",
     skills: [
-      { name: "User Experience", level: 90, icon: "👥" },
-      { name: "Information Architecture", level: 88, icon: "🏗️" },
-      { name: "Content Planning", level: 92, icon: "📋" },
-      { name: "Developer Advocacy", level: 85, icon: "🎯" }
+      { name: "User Experience", level: 90 },
+      { name: "Information Architecture", level: 88 },
+      { name: "Content Planning", level: 92 },
+      { name: "Developer Advocacy", level: 85 }
     ]
   }
 ];
@@ -50,7 +51,6 @@ function SkillBar({ skill }) {
   return (
     <div className={styles.skillItem}>
       <div className={styles.skillHeader}>
-        <span className={styles.skillIcon}>{skill.icon}</span>
         <span className={styles.skillName}>{skill.name}</span>
         <span className={styles.skillLevel}>{skill.level}%</span>
       </div>
@@ -134,21 +134,14 @@ export default function SkillsShowcase() {
               Let's discuss how I can help improve your developer experience and product adoption through clear, user-focused documentation.
             </p>
             <div className={styles.ctaButtons}>
+              <ResumeModal />
               <a 
-                href="https://docs.google.com/document/d/1YourGoogleDocsResumeID/edit"
-                className="button button--primary button--lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                📄 View Full Resume
-              </a>
-              <a 
-                href="https://www.notion.so/Samuel-Benson-Portfolio-231a5f1c6be08076a43ac5a54ae36a04#231a5f1c6be0815cba76efed82a5ce6c"
+                href="https://www.notion.so"
                 className="button button--outline button--primary button--lg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                💼 Browse Projects
+                Browse Projects
               </a>
             </div>
           </div>
