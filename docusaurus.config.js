@@ -103,22 +103,22 @@ const config = {
             {
               type: 'docSidebar',
               sidebarId: 'toolingSidebar',
-              label: '📚 Documentation Tooling',
+              label: 'Documentation Tooling',
             },
             {
               type: 'docSidebar',
               sidebarId: 'apiSidebar',
-              label: '🔌 Chimoney API Docs',
+              label: 'Chimoney API Docs',
             },
             {
               type: 'docSidebar',
               sidebarId: 'linterSidebar',
-              label: '🔧 Documentation Automation',
+              label: 'Documentation Automation',
             },
             {
               type: 'docSidebar',
               sidebarId: 'aiDocsSidebar',
-              label: '🤖 AI Documentation Project',
+              label: 'AI Documentation Project',
             },
           ],
         },
