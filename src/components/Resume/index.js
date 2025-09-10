@@ -11,11 +11,9 @@ export default function Resume() {
           <span>+2348148439986</span>
         </div>
         <div className={styles.links}>
-          <a href="https://linkedin.com/in/samuel-benson" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://hashnode.com/@samuel-benson" target="_blank" rel="noopener noreferrer">Hashnode</a>
-          <a href="https://medium.com/@samuel-benson" target="_blank" rel="noopener noreferrer">Medium</a>
+          <a href="https://www.linkedin.com/in/samuelbenso" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="#" onClick={(e) => e.preventDefault()}>Portfolio</a>
-          <a href="https://github.com/samuel-benson" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/Samuel-Benso" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
