@@ -65,15 +65,25 @@ const config = {
         docsPluginId: 'classic',
         config: {
           chimoney: {
-            // 👇 point to your spec (already correct)
             specPath: 'docs/api-documentation/api-reference/chimoney-spec.yaml',
-            // 👇 generate into the chimoney folder
             outputDir: 'docs/api-documentation/api-reference/chimoney',
             sidebarOptions: {
               groupPathsBy: 'tag',
             },
           },
         },
+      },
+    ],
+    // Local search plugin
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
       },
     ],
   ],
@@ -94,6 +104,10 @@ const config = {
           sidebarId: 'profileSidebar',
           position: 'left',
           label: 'About Me',
+        },
+        {
+          type: 'search',
+          position: 'right',
         },
         {
           type: 'dropdown',

@@ -41,3 +41,11 @@ content writing:
 openapi:
   label: OpenAPI
   description: API documentation and design using OpenAPI specifications
+
+search:
+  label: Search
+  description: Search functionality and optimization
+
+tutorial:
+  label: Tutorial
+  description: Step-by-step guides and how-tos
