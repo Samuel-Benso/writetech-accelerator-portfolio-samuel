@@ -52,7 +52,7 @@ This way, you’re clearer and also naturally including keywords.
 
 On-page SEO means tweaking your content so Google can understand it better.
 
-### Things to do:
+### Key Actions
 
 * **Title tag:** Put your main keyword at the start.
 

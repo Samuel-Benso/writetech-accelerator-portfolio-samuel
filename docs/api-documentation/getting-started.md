@@ -95,7 +95,7 @@ curl --location 'https://api-sandbox.chimoney.io/v0/info' \
 If you see this response, your API key works and you’re connected to the sandbox.
 
 
-## 7. Example Transaction: Airtime Payout
+## 7. Airtime Payout Example
 
 Let’s perform a **test airtime payout**:
 

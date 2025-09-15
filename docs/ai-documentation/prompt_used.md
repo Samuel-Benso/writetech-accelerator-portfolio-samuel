@@ -1,6 +1,6 @@
 # AI Prompts Used for LLaMA 2 Documentation
 
-## Prompt 1: Model Overview and FAQ Generation
+## Model Overview and FAQ Prompt
 
 **Prompt:**
 ```
@@ -21,7 +21,7 @@ Please structure the output with clear headings and provide factual, technical i
 
 **Rationale:** This prompt was designed to extract comprehensive information about LLaMA 2 while ensuring the AI provided structured, technical content suitable for developer documentation.
 
-## Prompt 2: Performance Benchmarks and Evaluation
+## Performance Benchmarks Prompt
 
 **Prompt:**
 ```
@@ -37,7 +37,7 @@ Format this as a technical report section that would be suitable for a model car
 
 **Rationale:** This prompt focused on extracting specific performance data and evaluation methodologies to create accurate, data-driven documentation.
 
-## Prompt 3: Risk Assessment and Limitations
+## Risk Assessment Prompt
 
 **Prompt:**
 ```

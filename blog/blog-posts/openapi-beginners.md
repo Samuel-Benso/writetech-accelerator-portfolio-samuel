@@ -11,7 +11,7 @@ keywords: [yaml tutorial for beginners, openapi guide, api documentation yaml, l
 <!-- truncate -->
 
 
-# Learning OpenAPI the Fun Way: Writing Your First YAML Spec
+# Learning OpenAPI - Writing Your First YAML Spec
 
 If you’re brand new to OpenAPI and YAML, don’t worry. I’ll take you by the hand. Imagine you’ve never heard of either, but by the end of this post, you’ll be able to read and even write a simple OpenAPI spec for a real API endpoint. Let’s make it fun, practical, and clear.
 

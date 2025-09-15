@@ -17,7 +17,7 @@ When you build a website with Docusaurus, two files shape how your site looks an
 
 The **sidebars.js** file controls the left-hand navigation in your documentation pages. Think of it like a table of contents. It tells Docusaurus what order to show your docs in and how they are grouped.
 
-### Example: A Simple Sidebar
+### Simple Sidebar Example
 
 ```js
 module.exports = {
@@ -46,7 +46,7 @@ If you leave out the sidebar or point to the wrong file name, your page may not 
 
 The **docusaurus.config.js** file sets up the big picture of your site. It manages titles, themes, navbar items, plugins, and more.
 
-### Example: Basic Config
+### Basic Configuration
 
 ```js
 module.exports = {
@@ -82,7 +82,7 @@ module.exports = {
 
 The **sidebar** organizes pages within the docs section. The **config file** decides where that docs section appears on the site.
 
-### Example: Linking Docs in Navbar
+### Linking Documentation in Navbar
 
 If your config file has this:
 
