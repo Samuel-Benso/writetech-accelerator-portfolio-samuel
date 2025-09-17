@@ -98,6 +98,20 @@
   flex: 1;
   min-width: 140px;
   text-align: center;
+  transition: all 0.2s ease;
+  border-width: 2px;
+}
+
+/* Make the primary outline button more visible */
+.button--outline.button--primary {
+  color: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary-lightest);
+}
+
+.button--outline.button--primary:hover {
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary-lightest);
+  border-color: transparent;
 }
 
 @media (min-width: 769px) {
