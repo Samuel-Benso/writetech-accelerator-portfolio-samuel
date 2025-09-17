@@ -1,0 +1,14 @@
+app_name: wth-bootcamp-app
+version: 1.0.0
+
+team_members:
+  - name: Alice
+    role: Developer
+  - name: Bob
+    role: DevOps Engineer
+
+environment:
+  stage: development
+  region: us-west-2
+
+  logging_enabled: true

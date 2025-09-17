@@ -1,52 +1,30 @@
-# LLaMA 2: Comprehensive Developer Documentation
+# LLaMA 2 Developer Guide
 
-## Executive Summary
+## Model Overview
 
-Meta's LLaMA 2 represents a significant advancement in open-source large language models, offering three model sizes (7B, 13B, 70B parameters) with improved performance, safety measures, and commercial licensing options. This documentation provides developers with essential information for implementation, deployment, and responsible use.
+LLaMA 2 is Meta's open-source language model with three sizes, each with different hardware requirements and capabilities.
 
-## Model Specifications
+### Model Specs
 
-### Architecture Overview
-- **Type:** Transformer decoder-only architecture
-- **Attention Mechanism:** Grouped-Query Attention (GQA) for improved inference efficiency
-- **Normalization:** RMSNorm for enhanced training stability
-- **Activation Function:** SwiGLU for better performance
-- **Position Encoding:** Rotary Positional Embeddings (RoPE)
-- **Vocabulary:** 32,000 tokens using SentencePiece tokenization
+| Model | Params | VRAM (FP16) | Hardware |
+|-------|--------|-------------|-----------|
+| 7B | 7B | 13GB | RTX 3090+ |
+| 13B | 13B | 25GB | A100 40GB |
+| 70B | 70B | 140GB | Multi-GPU |
 
-### Model Variants
+## Performance
 
-| Model | Parameters | Context Length | Memory (FP16) | Recommended Hardware |
-|-------|------------|----------------|---------------|---------------------|
-| LLaMA 2-7B | 7 billion | 4,096 tokens | ~13 GB | RTX 3090, A100 |
-| LLaMA 2-13B | 13 billion | 4,096 tokens | ~25 GB | A100 40GB |
-| LLaMA 2-70B | 70 billion | 4,096 tokens | ~140 GB | Multiple A100s |
+| Task | 7B | 13B | 70B |
+|------|----|-----|-----|
+| MMLU | 45.3 | 54.8 | 68.9 |
+| Math | 4.1 | 6.7 | 13.5 |
+| Code | 12.8 | 18.3 | 29.9 |
 
-## Performance Benchmarks
+## Quick Start
 
-### Academic Evaluation Results
-
-| Benchmark Category | Task | 7B Score | 13B Score | 70B Score |
-|-------------------|------|----------|-----------|-----------|
-| **Reading Comprehension** | MMLU | 45.3 | 54.8 | 68.9 |
-| **Commonsense Reasoning** | HellaSwag | 77.2 | 80.7 | 87.3 |
-| **Mathematical Reasoning** | MATH | 4.1 | 6.7 | 13.5 |
-| **Grade School Math** | GSM8K | 14.6 | 28.7 | 56.8 |
-| **Code Generation** | HumanEval | 12.8 | 18.3 | 29.9 |
-
-### Key Performance Insights
-- **Scaling Benefits:** Clear performance improvements with model size across all benchmarks
-- **Mathematical Reasoning:** Most significant gains observed (13x improvement from 7B to 70B on GSM8K)
-- **Code Generation:** Solid capabilities but specialized code models may outperform
-- **Multilingual:** Strong English performance with limited multilingual capabilities
-
-## Implementation Guide
-
-### Quick Start
 ```python
 from transformers import LlamaForCausalLM, LlamaTokenizer
 
-# Load model and tokenizer
 model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
 tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf")
 

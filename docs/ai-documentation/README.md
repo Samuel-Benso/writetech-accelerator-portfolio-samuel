@@ -11,11 +11,11 @@ A collection of pretrained and fine-tuned large language models (LLMs) ranging i
 
 | File            | Description |
 |-----------------|-------------|
-| model_card.md   | Manually written model card for Meta LLaMA 2 |
-| ai_output.md    | Raw output from AI tools (summary, outline, and FAQ) |
-| final_doc.md    | Polished documentation based on AI-generated content |
-| prompt_used.md  | Prompt(s) submitted to the AI tool |
-| reflection.md   | Personal reflections on improving the AI-generated content |
+| Model Card   | Manually written model card for Meta LLaMA 2 |
+| AI Output    | Raw output from AI tools (summary, outline, and FAQ) |
+| Final Doc    | Polished documentation based on AI-generated content |
+| Prompt Used  | Prompt(s) submitted to the AI tool |
+| Reflection   | Personal reflections on improving the AI-generated content |
 
 ## What I Did
 - Researched and analyzed Meta's LLaMA 2 model documentation

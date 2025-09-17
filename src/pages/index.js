@@ -50,6 +50,13 @@ function HomepageHeader() {
                 to="/blog">
                 Read My Blog
               </Link>
+              <Link
+                className="button button--outline button--primary button--lg"
+                href="https://docs-refract.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer">
+                View Refract Docs
+              </Link>
             </div>
           </div>
           <div className={styles.heroImage}>

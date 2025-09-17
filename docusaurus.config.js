@@ -134,6 +134,12 @@ const config = {
               sidebarId: 'aiDocsSidebar',
               label: 'AI Documentation Project',
             },
+            {
+              href: 'https://docs-refract.netlify.app/',
+              label: 'Refract Documentation',
+              target: '_blank',
+              rel: 'noopener noreferrer'
+            },
           ],
         },
         {to: '/blog', label: 'Blog', position: 'left'},

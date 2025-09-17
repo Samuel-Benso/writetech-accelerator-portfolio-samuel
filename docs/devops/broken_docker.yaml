@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+ web:
+    image: nginx: latest
+   ports:
+      - 8080:80
+ environment:
+   APP_ENV=development
+      APP_DEBUG : true
+    volumes:
+     - ./html:/usr/share/nginx/html
+ db:
+   image: postgres: 14
+     restart always
+    environment
+       POSTGRES_USER: user
+      POSTGRES_PASSWORD : pass
+    ports:
+        - "5432 :5432"
+     volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes
+  postgres_data
+
+

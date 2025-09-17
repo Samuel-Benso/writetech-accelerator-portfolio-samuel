@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const FeatureList = [
@@ -32,7 +33,7 @@ const FeatureList = [
       </>
     ),
     metrics: "Built 3+ documentation platforms"
-  },
+  }
 ];
 
 function Feature({Svg, title, description, metrics}) {
