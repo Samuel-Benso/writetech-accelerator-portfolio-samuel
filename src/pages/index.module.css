@@ -104,14 +104,17 @@
 
 /* Make the primary outline button more visible */
 .button--outline.button--primary {
-  color: var(--ifm-color-primary-lightest);
-  border-color: var(--ifm-color-primary-lightest);
+  color: white !important;
+  background-color: #191414 !important; /* Dark background */
+  border: 2px solid white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-weight: 500;
 }
 
 .button--outline.button--primary:hover {
-  color: var(--ifm-color-primary);
-  background: var(--ifm-color-primary-lightest);
-  border-color: transparent;
+  background-color: #282828 !important; /* Slightly lighter on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 @media (min-width: 769px) {

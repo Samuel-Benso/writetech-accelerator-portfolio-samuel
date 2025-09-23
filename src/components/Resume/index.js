@@ -12,7 +12,7 @@ export default function Resume() {
         </div>
         <div className={styles.links}>
           <a href="https://www.linkedin.com/in/samuelbenso" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="#" onClick={(e) => e.preventDefault()}>Portfolio</a>
+          <a href="https://writetech-accelerator-portfolio-sam-phi.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio</a>
           <a href="https://github.com/Samuel-Benso" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
