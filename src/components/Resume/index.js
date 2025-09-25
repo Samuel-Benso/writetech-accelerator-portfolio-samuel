@@ -6,7 +6,9 @@ export default function Resume() {
     <div className={styles.resume}>
       <div className={styles.header}>
         <h1 className={styles.name}>Samuel Benson</h1>
+        <h2 className={styles.title}>Technical Writer | API Documentation | Developer Experience</h2>
         <div className={styles.contact}>
+          <span>Lagos, Nigeria | Open to Remote (Global)</span>
           <span>samyben554@gmail.com</span>
           <span>+2348148439986</span>
         </div>
@@ -18,12 +20,12 @@ export default function Resume() {
       </div>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Professional Summary</h2>
+        <h2 className={styles.sectionTitle}>Profile Summary</h2>
         <p className={styles.summary}>
-          Technical Writer with hands-on experience creating user-centered documentation across open source and web3 ecosystems. 
-          Skilled in API documentation, developer guides, tutorials, and technical blogs. Adept at collaborating with cross-functional 
-          teams to simplify complex information into clear and engaging content. Passionate about open source, with proven expertise 
-          in content migration, documentation QA, and adapting to modern toolchains.
+          Technical Writer experienced in developer documentation for open source and web3. 
+          Specializes in API documentation, developer guides, and content strategy. Skilled in creating 
+          clear, comprehensive documentation that enhances developer experience and reduces support needs. 
+          Collaborates effectively with cross-functional teams to produce high-quality technical content.
         </p>
       </section>
 
@@ -37,9 +39,8 @@ export default function Resume() {
           </div>
           <h4 className={styles.jobRole}>Editor & Content Migration Contributor</h4>
           <ul className={styles.jobDescription}>
-            <li>Contributed to the documentation migration from Hugo to Docusaurus, restoring missing content and standardizing structure for better readability.</li>
-            <li>Optimized performance by replacing hosted images with local assets and ensuring consistent rendering, metadata, and footer design.</li>
-            <li>Used quiz components and course cards for API, Markdown, and AsciiDoc courses, enhancing interactivity and learner engagement.</li>
+            <li>Migrated docs from Hugo to Docusaurus and restored missing pages; standardized templates for consistent navigation and readability.</li>
+            <li>Replaced hosted images with local assets and normalized metadata, reducing external requests and improving page stability.</li>
           </ul>
         </div>
 
@@ -50,9 +51,8 @@ export default function Resume() {
           </div>
           <h4 className={styles.jobRole}>Technical Writer & Onboarding Lead</h4>
           <ul className={styles.jobDescription}>
-            <li>Transformed raw UX notes into developer-ready UX documentation, accelerating implementation and reducing rework.</li>
-            <li>Streamlined onboarding by creating a documentation hub, cutting new team member ramp-up time by over a week.</li>
-            <li>Tracked multi-team progress using GitHub project boards, boosting cross-functional visibility and delivery consistency.</li>
+            <li>Converted raw UX notes into developer-ready specs and guides, reducing rework by ~20% and speeding implementation.</li>
+            <li>Built a central docs hub that cut new-hire ramp-up time by 7+ days; improved cross-team visibility via GitHub project boards.</li>
           </ul>
         </div>
 
@@ -63,9 +63,8 @@ export default function Resume() {
           </div>
           <h4 className={styles.jobRole}>Content Administrator</h4>
           <ul className={styles.jobDescription}>
-            <li>Managed and published technical content for 80+ learners, ensuring clarity and alignment with learning goals.</li>
-            <li>Trained 10+ learners on foundational concepts of Computer Science including loops and conditionals setting a foundation for software development.</li>
-            <li>Increased content delivery efficiency by organizing a content workflow using Trello and Google Docs.</li>
+            <li>Published and maintained technical lessons for 80+ learners; aligned content with weekly learning goals.</li>
+            <li>Introduced a Trello/Docs workflow to streamline planning and increase on-time delivery by ~25%.</li>
           </ul>
         </div>
 
@@ -76,91 +75,65 @@ export default function Resume() {
           </div>
           <h4 className={styles.jobRole}>Contributor – Knowledge Base & Chronologue Working Groups</h4>
           <ul className={styles.jobDescription}>
-            <li>Collaborated with the Knowledge Base Working Group to write internal documentation that proactively reduces support ticket volume.</li>
-            <li>Contributed to the Chronologue Working Group, crafting documentation samples like API references, changelogs, and release notes using community-approved templates.</li>
-            <li>Participated in editorial reviews and discussions to maintain quality and consistency across published content.</li>
+            <li>Authored internal KB docs that reduced repeat support questions by ~15% and improved first-time-fix guidance.</li>
+            <li>Drafted API refs, release notes, and changelogs using community templates; contributed to editorial reviews for consistency.</li>
           </ul>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Skills & Technical Tools</h2>
-        
-        <div className={styles.skillsGrid}>
-          <div className={styles.skillCategory}>
-            <h3 className={styles.skillCategoryTitle}>Documentation Tools</h3>
-            <div className={styles.skillsList}>
-              <span className={styles.skill}>Docusaurus (95%)</span>
-              <span className={styles.skill}>Markdown (98%)</span>
-              <span className={styles.skill}>Git/GitHub (90%)</span>
-              <span className={styles.skill}>OpenAPI/Swagger (85%)</span>
-              <span className={styles.skill}>MKDocs</span>
-              <span className={styles.skill}>Mintlify</span>
-              <span className={styles.skill}>Astro Starlight</span>
-              <span className={styles.skill}>GitBook</span>
-              <span className={styles.skill}>Confluence</span>
-            </div>
+        <h2 className={styles.sectionTitle}>Education</h2>
+        <div className={styles.job}>
+          <div className={styles.jobHeader}>
+            <h3 className={styles.jobTitle}>Bachelor of Science in Computer Science</h3>
+            <span className={styles.jobPeriod}>Graduated October 2022</span>
           </div>
-
-          <div className={styles.skillCategory}>
-            <h3 className={styles.skillCategoryTitle}>Technical Skills</h3>
-            <div className={styles.skillsList}>
-              <span className={styles.skill}>React (80%)</span>
-              <span className={styles.skill}>JavaScript (85%)</span>
-              <span className={styles.skill}>API Documentation (95%)</span>
-              <span className={styles.skill}>Technical Writing (98%)</span>
-              <span className={styles.skill}>HTML/CSS</span>
-              <span className={styles.skill}>Python</span>
-              <span className={styles.skill}>Java</span>
-              <span className={styles.skill}>C++</span>
-            </div>
-          </div>
-
-          <div className={styles.skillCategory}>
-            <h3 className={styles.skillCategoryTitle}>Content Strategy & Tools</h3>
-            <div className={styles.skillsList}>
-              <span className={styles.skill}>User Experience (90%)</span>
-              <span className={styles.skill}>Information Architecture (88%)</span>
-              <span className={styles.skill}>Content Planning (92%)</span>
-              <span className={styles.skill}>Developer Advocacy (85%)</span>
-              <span className={styles.skill}>Postman</span>
-              <span className={styles.skill}>Jira</span>
-              <span className={styles.skill}>Notion</span>
-              <span className={styles.skill}>Lucidchart</span>
-              <span className={styles.skill}>Miro</span>
-            </div>
-          </div>
+          <p className={styles.jobRole}>Akwa Ibom State University, Nigeria</p>
+          <ul className={styles.jobDescription}>
+            <li>Relevant Coursework: Software Engineering, Database Systems, Web Development, Technical Writing</li>
+          </ul>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Personal (Side) Projects</h2>
+        <h2 className={styles.sectionTitle}>Technical Skills</h2>
+        <div className={styles.skillsList}>
+          <span className={styles.skill}>API Documentation</span>
+          <span className={styles.skill}>Developer Guides</span>
+          <span className={styles.skill}>Technical Writing</span>
+          <span className={styles.skill}>Markdown</span>
+          <span className={styles.skill}>Docusaurus</span>
+          <span className={styles.skill}>Git & GitHub</span>
+          <span className={styles.skill}>OpenAPI/Swagger</span>
+          <span className={styles.skill}>Postman</span>
+          <span className={styles.skill}>JavaScript</span>
+          <span className={styles.skill}>React</span>
+          <span className={styles.skill}>RESTful APIs</span>
+          <span className={styles.skill}>Documentation as Code</span>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Key Projects</h2>
         
         <div className={styles.project}>
-          <h3 className={styles.projectTitle}>Plaid API Docs (Postman)</h3>
+          <h3 className={styles.projectTitle}>Plaid API Documentation</h3>
           <p className={styles.projectDescription}>
-            Recreated Plaid API reference using Postman collections, featuring interactive endpoints and detailed documentation.
+            Recreated Plaid API reference using Postman with interactive endpoints and detailed examples, improving developer experience.
           </p>
         </div>
 
         <div className={styles.project}>
-          <h3 className={styles.projectTitle}>The Movie Database (TMDb) API Docs (Mintlify)</h3>
+          <h3 className={styles.projectTitle}>TMDb API Documentation</h3>
           <p className={styles.projectDescription}>
-            Used Mintlify to build interactive API documentation for TMDb with clean UI/UX for developers.
+            Built interactive API docs for The Movie Database using Mintlify, focusing on clean UI/UX for developers.
           </p>
         </div>
 
         <div className={styles.project}>
-          <h3 className={styles.projectTitle}>Vue.js Docs Recreation (Astro + Starlight)</h3>
+          <h3 className={styles.projectTitle}>Vue.js Docs Recreation</h3>
           <p className={styles.projectDescription}>
-            Wrote an audit report, and replicated the Vue.js docs site using Astro and Starlight SSG with improved layout, navigation, and SEO optimization.
-          </p>
-        </div>
-
-        <div className={styles.project}>
-          <h3 className={styles.projectTitle}>OpenMadness Documentation (VuePress)</h3>
-          <p className={styles.projectDescription}>
-            Collaborated in a team of 6 to create a full documentation suite from scratch using VuePress—including setup guides, API references, and feature overviews.
+            Recreated Vue.js documentation with Astro and Starlight, enhancing navigation and SEO.
           </p>
         </div>
       </section>

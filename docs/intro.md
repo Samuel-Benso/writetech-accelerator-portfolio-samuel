@@ -26,13 +26,12 @@ I'm Samuel Benson, a Technical Writer and Documentation Engineer. I specialize i
 | [API Documentation & OpenAPI](https://writetech-accelerator-portfolio-sam.vercel.app/docs/api-documentation/intro) | Improved documentation for selected endpoints from a real or public API |
 | [Documentation Automation](https://writetech-accelerator-portfolio-sam.vercel.app/docs/docs-automation/intro) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions |
 | [AI for Documentation](https://writetech-accelerator-portfolio-sam.vercel.app/docs/ai-documentation/final_doc) | Comparison of AI tools or prompt-based documentation using your own examples |
-| DevOps & Cloud Documentation | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
+| [DevOps & Cloud Documentation](/docs/devops-cloud-documentation/overview) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
 | Technical Writing in Web3 | User guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform |
 
 :::tip
 Only the completed projects currently have working links. Remaining modules will be added as I continue progressing through the program.
 :::
-
 
 
 ## 🔗 Additional Links

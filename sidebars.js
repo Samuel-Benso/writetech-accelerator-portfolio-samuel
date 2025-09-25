@@ -2,116 +2,93 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  profileSidebar: [
+  // Main sidebar for the documentation
+  docsSidebar: [
     {
       type: 'doc',
-      label: 'Overview',
       id: 'intro',
-    }
-  ],
-
-  toolingSidebar: [
-    {
-      type: 'doc',
-      label: 'Introduction',
-      id: 'documentation-tooling/intro',
+      label: 'Home',
     },
     {
       type: 'category',
-      label: 'JSONPlaceholder',
-      link: {
-        type: 'doc',
-        id: 'documentation-tooling/jsonplaceholder-overview'
-      },
+      label: 'Portfolio Projects',
+      collapsible: true,
+      collapsed: true,
       items: [
-        'documentation-tooling/getting-started',
+        // Documentation Tooling
         {
           type: 'category',
-          label: 'API Reference',
+          label: 'Documentation Tooling',
+          link: {
+            type: 'doc',
+            id: 'documentation-tooling/intro',
+          },
           items: [
-            'documentation-tooling/api-reference/get-user',
-            'documentation-tooling/api-reference/post',
+            {
+              type: 'category',
+              label: 'JSONPlaceholder',
+              items: [
+                'documentation-tooling/jsonplaceholder-overview',
+                'documentation-tooling/getting-started',
+              ],
+            },
           ],
-        }
-      ],
-    },
-  ],
-
-  // This is the section for Chimoney API docs.
-  apiSidebar: [
-    {
-      type: 'doc',
-      label: 'Introduction',
-      id: 'api-documentation/intro',
-    },
-    {
-      type: 'category',
-      label: 'Chimoney API',
-      link: {
-        type: 'doc',
-        id: 'api-documentation/getting-started',
-      },
-      items: [
-        // Manually list the files you want to include
-        'api-documentation/getting-started',
+        },
+        // API Documentation
         {
           type: 'category',
-          label: 'API Reference',
+          label: 'Chimoney API',
+          link: {
+            type: 'doc',
+            id: 'api-documentation/intro',
+          },
           items: [
-            'api-documentation/api-reference/chimoney/check-wallet-balance',
-            'api-documentation/api-reference/chimoney/send-money',
-            'api-documentation/api-reference/chimoney/get-transaction-status',
+            'api-documentation/getting-started',
+            {
+              type: 'category',
+              label: 'API Reference',
+              items: [
+                'api-documentation/api-reference/chimoney/check-wallet-balance',
+                'api-documentation/api-reference/chimoney/send-money',
+                'api-documentation/api-reference/chimoney/get-transaction-status',
+              ],
+            },
+          ],
+        },
+        // Documentation Automation
+        {
+          type: 'category',
+          label: 'Documentation Automation',
+          items: [
+            'docs-automation/intro',
+          ],
+        },
+        // AI Documentation
+        {
+          type: 'category',
+          label: 'AI Documentation',
+          items: [
+            'ai-documentation/README',
+            'ai-documentation/model_card',
+            'ai-documentation/final_doc',
+          ],
+        },
+        // DevOps Cloud Documentation
+        {
+          type: 'category',
+          label: 'DevOps Cloud Documentation',
+          items: [
+            'devops-cloud-documentation/overview',
+            'devops-cloud-documentation/setup',
+            'devops-cloud-documentation/step_by_step',
+            'devops-cloud-documentation/troubleshooting',
+            'devops-cloud-documentation/collaboration',
+            'devops-cloud-documentation/summary',
+            'devops-cloud-documentation/reflection',
+            'devops-cloud-documentation/README',
           ],
         },
       ],
-    },
-  ],
-// The Linter Tab
-linterSidebar: [
-    {
-      type: 'doc',
-      label: 'Introduction',
-      id: 'docs-automation/intro',
-    },
-    {
-      type: 'link',
-      href: '/api-docs',
-      label: 'Redocly API Reference',
-    },
-  ],
-// This tab ends here
-
-  // AI Documentation Project Tab
-  aiDocsSidebar: [
-    {
-      type: 'doc',
-      label: 'Project Overview',
-      id: 'ai-documentation/README',
-    },
-    {
-      type: 'doc',
-      label: 'Model Card',
-      id: 'ai-documentation/model_card',
-    },
-    {
-      type: 'doc',
-      label: 'Final Documentation',
-      id: 'ai-documentation/final_doc',
-    },
-    {
-      type: 'doc',
-      label: 'AI Output (Raw)',
-      id: 'ai-documentation/ai_output',
-    },
-    {
-      type: 'doc',
-      label: 'Prompts Used',
-      id: 'ai-documentation/prompt_used',
-    },
-    {
-      type: 'doc',
-      label: 'Reflection & Analysis',
-      id: 'ai-documentation/reflection',
     },
   ],
 };

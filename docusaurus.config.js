@@ -33,9 +33,15 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          docItemComponent: '@theme/ApiItem', // 🔑 Required for OpenAPI theme
+          docItemComponent: '@theme/ApiItem', // Required for OpenAPI theme
+          routeBasePath: '/', // Serve the docs at the site root
           editUrl:
-            'https://github.com/WriteTech-Hub/writetech-accelerator-portfolio-zainab',
+            'https://github.com/Samuel-Benso/writetech-accelerator-portfolio-samuel',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+          breadcrumbs: true,
+          sidebarCollapsible: true,
+          sidebarCollapsed: true,
         },
         blog: {
           showReadingTime: true,
@@ -100,47 +106,46 @@ const config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'profileSidebar',
+          type: 'doc',
+          docId: 'intro',
           position: 'left',
-          label: 'About Me',
+          label: 'Home',
         },
         {
-          type: 'search',
-          position: 'right',
-        },
-        {
-          type: 'dropdown',
+          to: '#',
           label: 'Portfolio Projects',
           position: 'left',
           items: [
             {
-              type: 'docSidebar',
-              sidebarId: 'toolingSidebar',
+              type: 'doc',
+              docId: 'documentation-tooling/intro',
               label: 'Documentation Tooling',
             },
             {
-              type: 'docSidebar',
-              sidebarId: 'apiSidebar',
-              label: 'Chimoney API Docs',
+              type: 'doc',
+              docId: 'api-documentation/intro',
+              label: 'API Documentation',
             },
             {
-              type: 'docSidebar',
-              sidebarId: 'linterSidebar',
-              label: 'Documentation Automation',
+              type: 'doc',
+              docId: 'docs-automation/intro',
+              label: 'Docs Automation',
             },
             {
-              type: 'docSidebar',
-              sidebarId: 'aiDocsSidebar',
-              label: 'AI Documentation Project',
+              type: 'doc',
+              docId: 'ai-documentation/README',
+              label: 'AI Documentation',
             },
             {
-              href: 'https://docs-refract.netlify.app/',
-              label: 'Refract Documentation',
-              target: '_blank',
-              rel: 'noopener noreferrer'
+              type: 'doc',
+              docId: 'devops-cloud-documentation/overview',
+              label: 'DevOps',
             },
           ],
+        },
+        {
+          type: 'search',
+          position: 'right',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
