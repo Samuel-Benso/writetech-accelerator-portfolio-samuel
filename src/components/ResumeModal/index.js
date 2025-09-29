@@ -85,7 +85,7 @@ export default function ResumeModal() {
         }}
         className="button button--primary button--lg"
       >
-        View Full Resume
+        View Resume
       </a>
 
       {isOpen && (

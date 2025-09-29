@@ -1,3 +1,9 @@
+---
+id: intro
+title: Meta LLaMA 2 Model
+sidebar_label: Overview
+---
+
 # Meta LLaMA 2 Model
 
 This project explores how AI tools can support documentation by generating drafts, extracting key insights, and supplementing existing materials.

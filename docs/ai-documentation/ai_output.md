@@ -1,3 +1,9 @@
+---
+id: ai_output
+title: AI Output
+sidebar_label: AI Output
+---
+
 # LLaMA 2 overview
 
 ## Overview

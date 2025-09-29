@@ -1,3 +1,9 @@
+---
+id: reflection
+title: AI vs Manual Documentation
+sidebar_label: AI vs Manual Documentation
+---
+
 # AI-Generated vs. Manual Documentation
 
 This project involved creating comprehensive documentation for Meta's LLaMA 2 model using a hybrid approach combining AI-generated content with manual curation and original writing.

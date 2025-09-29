@@ -1,3 +1,9 @@
+---
+id: prompt_used
+title: AI Prompts Used
+sidebar_label: AI Prompts Used
+---
+
 # AI Prompts Used for LLaMA 2 Documentation
 
 ## Model Overview and FAQ Prompt

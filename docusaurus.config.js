@@ -141,6 +141,11 @@ const config = {
               docId: 'devops-cloud-documentation/overview',
               label: 'DevOps',
             },
+            {
+              type: 'doc',
+              docId: 'web3/getting-started',
+              label: 'Web3 Documentation',
+            },
           ],
         },
         {

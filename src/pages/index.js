@@ -1,15 +1,17 @@
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import SkillsShowcase from '@site/src/components/SkillsShowcase';
+import ResumeModal from '@site/src/components/ResumeModal';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const [showResumeModal, setShowResumeModal] = useState(false);
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -51,12 +53,13 @@ function HomepageHeader() {
                 Read My Blog
               </Link>
               <Link
-                className="button button--outline button--primary button--lg"
+                className="button button--outline button--secondary button--lg"
                 href="https://docs-refract.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer">
                 View Refract Docs
               </Link>
+              <ResumeModal />
             </div>
           </div>
           <div className={styles.heroImage}>

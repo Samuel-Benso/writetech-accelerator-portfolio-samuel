@@ -20,23 +20,22 @@ I'm Samuel Benson, a Technical Writer and Documentation Engineer. I specialize i
 
 ## Project Modules
 
-| Module | Final Deliverables |
-|--------|------------------|
-| [Documentation Tooling & Static Site Generators](https://writetech-accelerator-portfolio-sam-phi.vercel.app/docs/documentation-tooling/intro) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
-| [API Documentation & OpenAPI](https://writetech-accelerator-portfolio-sam.vercel.app/docs/api-documentation/intro) | Improved documentation for selected endpoints from a real or public API |
-| [Documentation Automation](https://writetech-accelerator-portfolio-sam.vercel.app/docs/docs-automation/intro) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions |
-| [AI for Documentation](https://writetech-accelerator-portfolio-sam.vercel.app/docs/ai-documentation/final_doc) | Comparison of AI tools or prompt-based documentation using your own examples |
+| Module | Description |
+|--------|-------------|
+| [Documentation Tooling & Static Site Generators](/docs/documentation-tooling/intro) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
+| [API Documentation & OpenAPI](/docs/api-documentation/intro) | Improved documentation for selected endpoints from a real or public API |
+| [Documentation Automation](/docs/docs-automation/intro) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions |
+| [AI for Documentation](/docs/ai-documentation/README) | Comparison of AI tools or prompt-based documentation using your own examples |
 | [DevOps & Cloud Documentation](/docs/devops-cloud-documentation/overview) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
-| Technical Writing in Web3 | User guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform |
-
-:::tip
-Only the completed projects currently have working links. Remaining modules will be added as I continue progressing through the program.
-:::
+| [Technical Writing in Web3](/docs/web3/getting-started) | User guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform |
+  
+  :::tip
+  Only the completed projects currently have working links. Remaining modules will be added as I continue progressing through the program.
+  :::
 
 
 ## 🔗 Additional Links
 
 - [LinkedIn](https://www.linkedin.com/in/samuelbenso)
-- [Notion portfolio](https://www.notion.so/Samuel-Benson-Portfolio-231a5f1c6be08076a43ac5a54ae36a04#231a5f1c6be0815cba76efed82a5ce6c) – Includes other technical writing projects and experiences not covered in this WriteTech portfolio.
 
 Thanks for exploring my work!

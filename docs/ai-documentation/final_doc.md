@@ -1,3 +1,9 @@
+---
+id: final_doc
+title: LLaMA 2 Developer Guide
+sidebar_label: Developer Guide
+---
+
 # LLaMA 2 Developer Guide
 
 ## Model Overview

@@ -1,3 +1,9 @@
+---
+id: model_card
+title: Meta LLaMA 2 Model Card
+sidebar_label: Model Card
+---
+
 # Meta LLaMA 2 Model Card
 
 ## Model Overview

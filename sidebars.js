@@ -70,7 +70,10 @@ const sidebars = {
           items: [
             'ai-documentation/README',
             'ai-documentation/model_card',
+            'ai-documentation/ai_output',
             'ai-documentation/final_doc',
+            'ai-documentation/prompt_used',
+            'ai-documentation/reflection',
           ],
         },
         // DevOps Cloud Documentation
@@ -86,6 +89,17 @@ const sidebars = {
             'devops-cloud-documentation/summary',
             'devops-cloud-documentation/reflection',
             'devops-cloud-documentation/README',
+          ],
+        },
+        // Web3 Documentation
+        {
+          type: 'category',
+          label: 'Web3 Documentation',
+          items: [
+            'web3/getting-started',
+            'web3/how-it-works',
+            'web3/smart-contract-reference',
+            'web3/example-interactions',
           ],
         },
       ],
