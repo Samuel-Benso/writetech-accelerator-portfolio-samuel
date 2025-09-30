@@ -18,12 +18,12 @@ I'm Samuel Benson, a Technical Writer and Documentation Engineer. I specialize i
 
 | Module | Description |
 |--------|-------------|
-| [Documentation Tooling & Static Site Generators](/docs/documentation-tooling/intro) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
-| [API Documentation & OpenAPI](/docs/api-documentation/intro) | Improved documentation for selected endpoints from a real or public API |
-| [Documentation Automation](/docs/docs-automation/intro) | Automated checks (style, links, builds) using tools like Vale, Spectral, and GitHub Actions |
-| [AI for Documentation](/docs/ai-documentation/intro) | Comparison of AI tools or prompt-based documentation using your own examples |
-| [DevOps & Cloud Documentation](/docs/devops-cloud-documentation/overview) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
-| [Technical Writing in Web3](/docs/web3/getting-started) | User guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform |
+| [Documentation Tooling & Static Site Generators](https://writetech-accelerator-portfolio-sam.vercel.app/documentation-tooling/intro) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
+| [API Documentation & OpenAPI](https://writetech-accelerator-portfolio-sam.vercel.app/api-documentation/intro) | Improved documentation for selected endpoints from a real or public API |
+| [Documentation Automation](https://writetech-accelerator-portfolio-sam.vercel.app/docs-automation/intro) using tools like Vale, Spectral, and GitHub Actions |
+| [AI for Documentation](https://writetech-accelerator-portfolio-sam.vercel.app/ai-documentation/) | Comparison of AI tools or prompt-based documentation using your own examples |
+| [DevOps & Cloud Documentation](https://writetech-accelerator-portfolio-sam.vercel.app/devops-cloud-documentation/overview) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
+| [Technical Writing in Web3](https://writetech-accelerator-portfolio-sam.vercel.app/web3/getting-started) | User guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform |
 
 
 ## 🔗 Additional Links
