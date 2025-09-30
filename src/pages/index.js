@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import SkillsShowcase from '@site/src/components/SkillsShowcase';
 import ResumeModal from '@site/src/components/ResumeModal';
+import TypingAnimation from '../components/TypingAnimation';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -17,7 +18,9 @@ function HomepageHeader() {
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <div className={styles.greeting}>👋 Hello, I'm</div>
+            <div className={styles.greeting}>
+              <TypingAnimation text="👋 Hello, I'm" speed={100} />
+            </div>
             <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
               Samuel Benson
             </Heading>
