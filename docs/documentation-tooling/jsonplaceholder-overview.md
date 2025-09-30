@@ -81,28 +81,3 @@ print(response.json())
   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum..."
 }
 ```
-
-## Notes
-
-<details>
-  <summary>Limitations</summary>
-
-* All data is **fake** (not persistent).
-* POST, PUT, PATCH, DELETE requests **won’t actually change data** (they simulate success).
-* Great for **mocking APIs** in front-end apps.
-
-</details>
-
-
-## Use Cases
-
-* Testing API integrations.
-* Learning REST API basics.
-* Prototyping apps before real backend is ready.
-* Mocking data in UI components.
-
-
-:::success
-Now you’re ready to start making requests to JSONPlaceholder!
-:::
-```

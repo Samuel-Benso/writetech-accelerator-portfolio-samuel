@@ -8,7 +8,6 @@ import TabItem from '@theme/TabItem';
 
 Retrieve details of a specific user by their ID.
 
-
 ## Endpoint
 `GET https://jsonplaceholder.typicode.com/users/{id}`
 
@@ -16,7 +15,7 @@ Retrieve details of a specific user by their ID.
 
 | Name | Type   | Required | Description                |
 |------|--------|----------|----------------------------|
-| id   | number | ✅        | The unique ID of the user. |
+| id   | number | Yes      | The unique ID of the user. |
 
 
 ## Example Requests

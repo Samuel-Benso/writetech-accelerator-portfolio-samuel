@@ -30,6 +30,16 @@ const sidebars = {
               items: [
                 'documentation-tooling/jsonplaceholder-overview',
                 'documentation-tooling/getting-started',
+                {
+                  type: 'doc',
+                  id: 'documentation-tooling/api-reference/post',
+                  label: 'Create Post',
+                },
+                {
+                  type: 'doc',
+                  id: 'documentation-tooling/api-reference/get-user',
+                  label: 'Get User',
+                },
               ],
             },
           ],

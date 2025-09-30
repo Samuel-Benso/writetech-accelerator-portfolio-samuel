@@ -75,16 +75,11 @@ print(response.json())
 ```
 
 
-## sucess Next Steps
+## Next Steps
 
-* Explore the available resources:
-
-  * [Users](./api-reference/get-user.md)
-  * [Posts](./api-reference/post.md)
-* Learn how to create, update, and delete resources with fake data.
+- Explore the available resources:
+  - [Users](./api-reference/get-user.md)
+  - [Posts](./api-reference/post.md)
+- Learn how to create, update, and delete resources with fake data.
 
 ---
-
-That’s it! You’re up and running with JSONPlaceholder. 
-
-```

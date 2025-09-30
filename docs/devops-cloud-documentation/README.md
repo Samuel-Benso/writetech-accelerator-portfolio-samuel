@@ -116,20 +116,15 @@ This documentation is designed for:
 ## Success Metrics
 
 By the end of this guide, you should be able to:
-
 - Create a basic CI/CD workflow
 - Understand workflow triggers and conditions
 - Debug common workflow issues
 - Optimize workflow performance
 - Apply security best practices
-- ✅ Optimize workflow performance
-- ✅ Apply security best practices
 
 ## Contributing
 
 This documentation follows the Google Developer Documentation Style Guide and welcomes improvements:
-
-- Report issues or suggest enhancements
 - Submit pull requests with corrections or additions
 - Share your own workflow examples
 - Provide feedback on clarity and usefulness

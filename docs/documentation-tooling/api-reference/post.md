@@ -8,17 +8,15 @@ import TabItem from '@theme/TabItem';
 
 Create a new post by sending a POST request with the required fields.
 
-## Endpoint
-
 `POST https://jsonplaceholder.typicode.com/posts`
 
 ## Request Body Fields
 
-| Name    | Type    | Required | Description         |
-|---------|---------|----------|---------------------|
-| title   | string  | ✅        | Title of the post   |
-| body    | string  | ✅        | Content of the post |
-| userId  | number  | ✅        | ID of the user      |
+| Name   | Type   | Required | Description           |
+|--------|--------|----------|-----------------------|
+| title  | string | Yes      | Title of the post     |
+| body   | string | Yes      | Content of the post   |
+| userId | number | Yes      | ID of the user        |
 
 ## Example Requests
 
