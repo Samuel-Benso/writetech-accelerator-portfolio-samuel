@@ -57,9 +57,7 @@ function HomepageHeader() {
               </Link>
               <Link
                 className="button button--outline button--secondary button--lg"
-                href="https://docs-refract.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer">
+                href="https://docs-refract.netlify.app/">
                 View Refract Docs
               </Link>
               <ResumeModal />
