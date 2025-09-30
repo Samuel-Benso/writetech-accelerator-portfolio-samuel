@@ -109,7 +109,7 @@ const config = {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Home',
+          label: 'About Me',
         },
         {
           to: '#',
@@ -133,7 +133,7 @@ const config = {
             },
             {
               type: 'doc',
-              docId: 'ai-documentation/README',
+              docId: 'ai-documentation/intro',
               label: 'AI Documentation',
             },
             {

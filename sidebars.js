@@ -68,7 +68,7 @@ const sidebars = {
           type: 'category',
           label: 'AI Documentation',
           items: [
-            'ai-documentation/README',
+            'ai-documentation/intro',
             'ai-documentation/model_card',
             'ai-documentation/ai_output',
             'ai-documentation/final_doc',
