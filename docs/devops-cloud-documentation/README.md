@@ -2,13 +2,13 @@
 
 This project provides comprehensive, beginner-friendly documentation for setting up CI/CD workflows using GitHub Actions.
 
-## 🔧 Topic
+## Topic
 
 **Automate workflows with GitHub Actions**
 
 This guide teaches developers how to create automated CI/CD pipelines using GitHub Actions. It covers workflow basics, setup procedures, practical examples, and troubleshooting common issues.
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
 - Understand CI/CD principles and GitHub Actions fundamentals
 - Create automated workflows for building, testing, and deploying code
@@ -16,7 +16,7 @@ This guide teaches developers how to create automated CI/CD pipelines using GitH
 - Debug and optimize workflow performance
 - Apply security best practices to automated processes
 
-## 📂 Project Files
+## Project Files
 
 | File | Description |
 |------|-------------|
@@ -27,7 +27,7 @@ This guide teaches developers how to create automated CI/CD pipelines using GitH
 | summary.md | Key takeaways, best practices, and next steps |
 | reflection.md | Personal insights and lessons learned from the project |
 
-## 📋 What You'll Learn
+## What You'll Learn
 
 ### Core Concepts
 - **Workflow structure**: Events, jobs, steps, and actions
@@ -47,7 +47,7 @@ This guide teaches developers how to create automated CI/CD pipelines using GitH
 - **Security scanning**: Integrating security checks
 - **Performance monitoring**: Tracking workflow efficiency
 
-## 🚀 Quick Start
+## Getting Started
 
 1. **Set up prerequisites**
    - Create a GitHub account
@@ -70,7 +70,7 @@ This guide teaches developers how to create automated CI/CD pipelines using GitH
    - Monitor execution in GitHub Actions tab
    - Debug and optimize as needed
 
-## 🔍 Key Features
+## Key Features
 
 - **Beginner-friendly**: Starts with basics and builds complexity
 - **Practical examples**: Real code snippets and workflows
@@ -78,7 +78,7 @@ This guide teaches developers how to create automated CI/CD pipelines using GitH
 - **Performance optimization**: Tips for faster, more efficient workflows
 - **Security considerations**: Best practices for secure automation
 
-## 💡 Why GitHub Actions?
+## Why GitHub Actions?
 
 GitHub Actions provides a powerful, integrated platform for automating software development workflows:
 
@@ -88,7 +88,7 @@ GitHub Actions provides a powerful, integrated platform for automating software 
 - **Cost-effective**: Free for public repositories, generous limits for private
 - **Community-driven**: Thousands of pre-built actions available
 
-## 🎓 Target Audience
+## Target Audience
 
 This documentation is designed for:
 
@@ -98,7 +98,7 @@ This documentation is designed for:
 - **Technical writers** documenting development processes
 - **Students** learning modern development practices
 
-## 📊 Project Scope
+## Project Scope
 
 - **Topic**: GitHub Actions for CI/CD automation
 - **Level**: Beginner to intermediate
@@ -106,24 +106,26 @@ This documentation is designed for:
 - **Length**: Comprehensive but accessible
 - **Style**: Google Developer Documentation Style Guide
 
-## 🔗 Related Resources
+## Related Resources
 
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [GitHub Actions Learning Lab](https://lab.github.com/githubtraining/github-actions:-hello-world)
 - [Awesome Actions](https://github.com/sdras/awesome-actions)
 - [GitHub Actions Community](https://github.community/c/code-to-cloud/github-actions/41)
 
-## 📈 Success Metrics
+## Success Metrics
 
 By the end of this guide, you should be able to:
 
-- ✅ Create a basic CI/CD workflow
-- ✅ Understand workflow triggers and conditions
-- ✅ Debug common workflow issues
+- Create a basic CI/CD workflow
+- Understand workflow triggers and conditions
+- Debug common workflow issues
+- Optimize workflow performance
+- Apply security best practices
 - ✅ Optimize workflow performance
 - ✅ Apply security best practices
 
-## 🤝 Contributing
+## Contributing
 
 This documentation follows the Google Developer Documentation Style Guide and welcomes improvements:
 
