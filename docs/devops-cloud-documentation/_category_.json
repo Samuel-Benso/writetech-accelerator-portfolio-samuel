@@ -1,0 +1,12 @@
+{
+  "label": "DevOps & Cloud",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "DevOps practices and cloud infrastructure documentation.",
+    "slug": "/category/devops-cloud"
+  },
+  "customProps": {
+    "description": "Documentation for DevOps processes, tools, and cloud infrastructure."
+  }
+}

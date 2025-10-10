@@ -1,0 +1,12 @@
+{
+  "label": "Documentation Automation",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Tools and processes for automating documentation workflows.",
+    "slug": "/category/docs-automation"
+  },
+  "customProps": {
+    "description": "Automation tools and workflows for efficient documentation."
+  }
+}

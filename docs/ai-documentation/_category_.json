@@ -1,0 +1,12 @@
+{
+  "label": "AI Documentation",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore AI documentation projects and resources.",
+    "slug": "/category/ai-documentation"
+  },
+  "customProps": {
+    "description": "Documentation and resources for AI and machine learning projects."
+  }
+}

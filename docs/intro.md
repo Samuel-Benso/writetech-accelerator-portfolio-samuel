@@ -16,14 +16,11 @@ I'm Samuel Benson, a Technical Writer and Documentation Engineer. I specialize i
 
 ## Project Modules
 
-| Module | Description |
-|--------|-------------|
-| [Documentation Tooling & Static Site Generators](/documentation-tooling/intro) | How-to guide for setting up a docs-as-code workflow using Docusaurus |
-| [API Documentation & OpenAPI](/api-documentation/intro) | Improved documentation for selected endpoints from a real or public API |
-| [Documentation Automation](/docs-automation/intro) | Using tools like Vale, Spectral, and GitHub Actions |
-| [AI for Documentation](/ai-documentation/) | Comparison of AI tools or prompt-based documentation using your own examples |
-| [DevOps & Cloud Documentation](/devops-cloud-documentation/overview) | Step-by-step guide for a DevOps/cloud tool or process (e.g., CI/CD, deployment) |
-| [Technical Writing in Web3](/web3/getting-started) | User guide for a Web3 tool, white paper draft, or improved API documentation for a Web3 platform |
+import ModuleGrid from '@site/src/components/ModuleGrid';
+
+<ModuleGrid />
+
+Each module represents a key area of technical writing and documentation that I've mastered during the WriteTech Accelerator Programme. Click on any card to explore the projects and see my approach to creating clear, user-focused documentation.
 
 
 ## 🔗 Additional Links

@@ -1,101 +1,101 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-export default function Resume() {
+const Resume = () => {
   return (
     <div className={styles.resume}>
-      <div className={styles.header}>
-        <h1 className={styles.name}>SAMUEL BENSON</h1>
-        <h2 className={styles.title}>Technical Writer | API Documentation Specialist</h2>
-        <div className={styles.contact}>
-          <span>Lagos, Nigeria | Remote | samyben554@gmail.com | +2348148439986</span>
-        </div>
-        <div className={styles.links}>
-          <a href="https://www.linkedin.com/in/samuelbenso" target="_blank" rel="noopener noreferrer">linkedin.com/in/samuelbenso</a>
-          <span> | </span>
-          <a href="https://github.com/Samuel-Benso" target="_blank" rel="noopener noreferrer">github.com/Samuel-Benso</a>
-        </div>
-      </div>
+      <header className={styles.header}>
+        <h1>Samuel Benson</h1>
+        <p className={styles.contact}>
+          Lagos, Nigeria | +234 814 843 9986 | samyben554@gmail.com<br />
+          <a href="https://linkedin.com/in/samuelbenso" target="_blank" rel="noopener noreferrer" className={styles.link}>
+            LinkedIn Profile
+          </a>{' '}
+          |{' '}
+          <a href="https://github.com/Samuel-Benso" target="_blank" rel="noopener noreferrer" className={styles.link}>
+            GitHub Portfolio
+          </a>
+        </p>
+      </header>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>PROFESSIONAL SUMMARY</h2>
-        <p className={styles.summary}>
-          Technical Writer with 3+ years of experience creating developer documentation, API references, and user guides. 
-          Proven track record of reducing support tickets by 50% and improving developer onboarding time through clear, 
-          concise documentation. Skilled in Docusaurus, Markdown, OpenAPI, and version control.
+        <h2>Technical Writer & API Documentation Specialist</h2>
+        <p>
+          Technical writer with 2+ years of experience creating clear, user-focused documentation for developers. 
+          Skilled in API documentation, technical writing, and developer advocacy. Passionate about making complex 
+          technical concepts accessible through well-structured documentation and tutorials. Currently open to new 
+          opportunities and available to start immediately.
         </p>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>EXPERIENCE</h2>
+        <h2>Professional Experience</h2>
         
-        <div className={styles.job}>
-          <div className={styles.jobHeader}>
-            <h3 className={styles.jobTitle}>myRide</h3>
-            <span className={styles.jobPeriod}>April 2024 – Present</span>
-          </div>
-          <h4 className={styles.jobRole}>Technical Writer & Documentation Lead</h4>
-          <ul className={styles.jobDescription}>
-            <li>Reduced development ambiguity by 40% through comprehensive iOS app requirement documentation and user flows</li>
-            <li>Created ecosystem documentation covering server architecture, database schemas, and APIs, accelerating third-party onboarding by 35%</li>
+        <div className={styles.experience}>
+          <h3>Technical Writer & Documentation Lead (Volunteer)</h3>
+          <p className={styles.company}>myRide | April 2024 – Present</p>
+          <ul>
+            <li>Reduced development ambiguity by 40% through comprehensive iOS app requirement documentation</li>
+            <li>Created ecosystem documentation covering server architecture, database schemas, and APIs</li>
             <li>Implemented version-controlled documentation system, reducing support tickets by 50%</li>
           </ul>
         </div>
 
-        <div className={styles.job}>
-          <div className={styles.jobHeader}>
-            <h3 className={styles.jobTitle}>The Coding Clubhouse</h3>
-            <span className={styles.jobPeriod}>January 2025 – Present</span>
-          </div>
-          <h4 className={styles.jobRole}>Technical Writer & Documentation Lead</h4>
-          <ul className={styles.jobDescription}>
-            <li>Cut developer onboarding time by 50% through comprehensive documentation for NGO websites</li>
-            <li>Improved UI consistency by 60% by creating Tailwind CSS implementation guides and component libraries</li>
-            <li>Reduced UI-related bugs by 45% through documentation-driven development practices</li>
+        <div className={styles.experience}>
+          <h3>Technical Writing Intern</h3>
+          <p className={styles.company}>GAOTEK | May 2025 – August 2025</p>
+          <ul>
+            <li>Researched and wrote web content and product details to help developers build faster</li>
+            <li>Created clear, concise documentation that improved developer experience</li>
+            <li>Collaborated with developers to understand technical concepts and translate them into user-friendly content</li>
           </ul>
         </div>
 
-        <div className={styles.job}>
-          <div className={styles.jobHeader}>
-            <h3 className={styles.jobTitle}>Technical Writing Mentorship Program</h3>
-            <span className={styles.jobPeriod}>May 2025 – Present</span>
-          </div>
-          <h4 className={styles.jobRole}>Editor & Content Migration Contributor</h4>
-          <ul className={styles.jobDescription}>
+        <div className={styles.experience}>
+          <h3>Editor & Content Migration Contributor (Volunteer)</h3>
+          <p className={styles.company}>Technical Writing Mentorship Program | May 2025 – Present</p>
+          <ul>
             <li>Migrated documentation from Hugo to Docusaurus, standardizing templates and improving navigation</li>
             <li>Optimized page performance by replacing hosted images with local assets and normalizing metadata</li>
           </ul>
         </div>
       </section>
-
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>TECHNICAL SKILLS</h2>
-        <div className={styles.skillsList}>
-          <span className={styles.skill}>API Documentation</span>
-          <span className={styles.skill}>Technical Writing</span>
-          <span className={styles.skill}>Docusaurus</span>
-          <span className={styles.skill}>Markdown</span>
-          <span className={styles.skill}>OpenAPI/Swagger</span>
-          <span className={styles.skill}>Git & GitHub</span>
-          <span className={styles.skill}>JavaScript</span>
-          <span className={styles.skill}>Postman</span>
-          <span className={styles.skill}>React</span>
-          <span className={styles.skill}>RESTful APIs</span>
-          <span className={styles.skill}>Tailwind CSS</span>
-          <span className={styles.skill}>Documentation as Code</span>
+        <h2>Education</h2>
+        <div className={styles.education}>
+          <h3>BSc in Computer Science</h3>
+          <p>Akwa Ibom State University, Nigeria | 2018 - 2022</p>
+          <p>Coursework: Data Structures, Algorithms, Database Systems, Software Engineering, Web Development</p>
         </div>
       </section>
 
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>EDUCATION</h2>
-        <div className={styles.job}>
-          <div className={styles.jobHeader}>
-            <h3 className={styles.jobTitle}>B.Sc. Computer Science</h3>
-            <span className={styles.jobPeriod}>Graduated 2022</span>
-          </div>
-          <p className={styles.jobRole}>Akwa Ibom State University, Nigeria</p>
+        <h2>Skills</h2>
+        <div className={styles.skills}>
+          <p>
+            <strong>Technical:</strong> API Documentation, Technical Writing, User Guides, OpenAPI/Swagger, Markdown, REST APIs
+          </p>
+          <p>
+            <strong>Technologies:</strong> JavaScript, React, Git, Docusaurus, VS Code, Postman
+          </p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <h2>Projects</h2>
+        <div className={styles.project}>
+          <h3>API Documentation Portal</h3>
+          <p>Developed comprehensive API documentation for a fintech startup using OpenAPI and Swagger UI, reducing integration time by 40%.</p>
+          <p><strong>Technologies:</strong> OpenAPI, Swagger UI, Docusaurus, GitHub Actions</p>
+        </div>
+        <div className={styles.project}>
+          <h3>Refract Documentation</h3>
+          <p>Created and maintained developer documentation for Refract, focusing on clear API references and integration guides. Improved developer experience with practical examples and troubleshooting guides.</p>
+          <p><strong>Technologies:</strong> Markdown, Docusaurus, OpenAPI, React, GitHub</p>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Resume;

@@ -1,0 +1,12 @@
+{
+  "label": "Documentation Tooling",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Tools and resources for technical writing and documentation.",
+    "slug": "/category/documentation-tooling"
+  },
+  "customProps": {
+    "description": "Essential tools and resources for technical writers and documentarians."
+  }
+}

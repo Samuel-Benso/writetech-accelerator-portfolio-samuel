@@ -24,23 +24,17 @@ const sidebars = {
             id: 'documentation-tooling/intro',
           },
           items: [
+            'documentation-tooling/jsonplaceholder-overview',
+            'documentation-tooling/getting-started',
             {
-              type: 'category',
-              label: 'JSONPlaceholder',
-              items: [
-                'documentation-tooling/jsonplaceholder-overview',
-                'documentation-tooling/getting-started',
-                {
-                  type: 'doc',
-                  id: 'documentation-tooling/api-reference/post',
-                  label: 'Create Post',
-                },
-                {
-                  type: 'doc',
-                  id: 'documentation-tooling/api-reference/get-user',
-                  label: 'Get User',
-                },
-              ],
+              type: 'doc',
+              id: 'documentation-tooling/api-reference/post',
+              label: 'Create Post',
+            },
+            {
+              type: 'doc',
+              id: 'documentation-tooling/api-reference/get-user',
+              label: 'Get User',
             },
           ],
         },
@@ -86,6 +80,18 @@ const sidebars = {
             'ai-documentation/reflection',
           ],
         },
+        // Web3 Documentation
+        {
+          type: 'category',
+          label: 'Web3 Documentation',
+          items: [
+            'web3/README',
+            'web3/getting-started',
+            'web3/how-it-works',
+            'web3/example-interactions',
+            'web3/smart-contract-reference',
+          ],
+        },
         // DevOps Cloud Documentation
         {
           type: 'category',
@@ -98,23 +104,11 @@ const sidebars = {
             'devops-cloud-documentation/collaboration',
             'devops-cloud-documentation/summary',
             'devops-cloud-documentation/reflection',
-            'devops-cloud-documentation/README',
           ],
-        },
-        // Web3 Documentation
-        {
-          type: 'category',
-          label: 'Web3 Documentation',
-          items: [
-            'web3/getting-started',
-            'web3/how-it-works',
-            'web3/smart-contract-reference',
-            'web3/example-interactions',
-          ],
-        },
+        }
       ],
-    },
-  ],
+    }
+  ]
 };
 
 module.exports = sidebars;

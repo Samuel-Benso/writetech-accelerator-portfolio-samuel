@@ -1,0 +1,12 @@
+{
+  "label": "API Documentation",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore API documentation projects and resources.",
+    "slug": "/category/api-documentation"
+  },
+  "customProps": {
+    "description": "Comprehensive API documentation for various services and tools."
+  }
+}
