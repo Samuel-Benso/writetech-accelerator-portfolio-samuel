@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Resume from '../resume';
+import Resume from '../Resume';
 import styles from '../Resume/styles.module.css';
 
 const ResumeModal = () => {
