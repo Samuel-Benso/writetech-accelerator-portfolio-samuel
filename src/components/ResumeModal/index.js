@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Resume from '../Resume';
-import styles from '../Resume/styles.module.css';
+import styles from './styles.module.css';
 
 const ResumeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -140,93 +140,24 @@ const ResumeModal = () => {
       {isOpen && (
         <div 
           className={styles.modalOverlay}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000,
-            padding: '1rem',
-            overflowY: 'auto'
-          }}
           onClick={handleOverlayClick}
         >
-          <div 
-            className={styles.modalContent}
-            style={{
-              backgroundColor: 'white',
-              borderRadius: '8px',
-              width: '100%',
-              maxWidth: '900px',
-              maxHeight: '90vh',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column'
-            }}
-          >
-            <div 
-              className={styles.modalHeader}
-              style={{
-                padding: '1rem 1.5rem',
-                borderBottom: '1px solid #eee',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                backgroundColor: '#f8f9fa'
-              }}
-            >
-              <h2 
-                className={styles.modalTitle}
-                style={{
-                  margin: 0,
-                  fontSize: '1.25rem',
-                  color: '#333'
-                }}
-              >
+          <div className={styles.modalContent}>
+            <div className={styles.modalHeader}>
+              <h2 className={styles.modalTitle}>
                 Resume - Samuel Benson
               </h2>
-              <div 
-                className={styles.modalActions}
-                style={{
-                  display: 'flex',
-                  gap: '0.75rem',
-                  alignItems: 'center'
-                }}
-              >
+              <div className={styles.modalActions}>
                 <button 
                   onClick={downloadResume}
-                  style={{
-                    background: '#1DB954',
-                    color: 'white',
-                    border: 'none',
-                    padding: '0.5rem 1rem',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    fontSize: '0.9rem',
-                    fontWeight: 500
-                  }}
+                  className={styles.downloadButton}
                   aria-label="Download resume as PDF"
                 >
                   <span>📄</span> Download PDF
                 </button>
               </div>
             </div>
-            <div 
-              className={styles.modalBody}
-              style={{
-                padding: '1.5rem',
-                overflowY: 'auto',
-                flex: 1
-              }}
-            >
+            <div className={styles.modalBody}>
               <div ref={resumeRef}>
                 <Resume />
               </div>
