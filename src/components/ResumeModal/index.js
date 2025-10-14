@@ -1,158 +1,197 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Resume from '../resume';
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
+import Resume from '../Resume';
 import styles from './styles.module.css';
 
 const ResumeModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const resumeRef = useRef(null);
+  const [isDownloading, setIsDownloading] = useState(false);
 
-  const downloadResume = (e) => {
+  const downloadResume = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     
-    // Get the resume content
-    const resumeContent = document.querySelector('.resume');
-    if (!resumeContent) {
-      console.error('Resume content not found');
-      return;
-    }
-
-    // Create a clone to avoid modifying the original
-    const contentClone = resumeContent.cloneNode(true);
+    if (!resumeRef.current || isDownloading) return;
     
-    // Remove any existing print buttons or non-essential elements
-    const printButtons = contentClone.querySelectorAll('button, .no-print');
-    printButtons.forEach(btn => btn.remove());
-
-    // Create a new window for printing
-    const printWindow = window.open('', '_blank');
-    if (!printWindow) {
-      console.error('Failed to open print window');
-      return;
-    }
-
-    // Basic HTML template for printing
-    const printContent = `
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Samuel Benson - Resume</title>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-            body { 
-              font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-              line-height: 1.6;
-              color: #333;
-              max-width: 800px;
-              margin: 0 auto;
-              padding: 2rem;
-              -webkit-print-color-adjust: exact !important;
-              print-color-adjust: exact !important;
-            }
-            .header { 
-              text-align: center; 
-              margin-bottom: 2rem; 
-              padding-bottom: 1.5rem; 
-              border-bottom: 2px solid #f0f0f0;
-            }
-            .contact { 
-              text-align: center; 
-              margin-bottom: 1.5rem; 
-              color: #555;
-            }
-            .contact a { 
-              color: #1DB954; 
-              text-decoration: none; 
-            }
-            .section { 
-              margin-bottom: 2rem; 
-              page-break-inside: avoid;
-            }
-            .section h2 { 
-              color: #1DB954; 
-              border-bottom: 2px solid #1DB954;
-              padding-bottom: 0.5rem;
-              margin: 1.5rem 0 1rem;
-            }
-            .experience { 
-              margin-bottom: 1.5rem; 
-              page-break-inside: avoid;
-            }
-            .experience h3 { 
-              margin: 0.5rem 0 0.25rem; 
-              color: #333;
-            }
-            .company { 
-              color: #666; 
-              font-weight: 500;
-              margin-bottom: 0.5rem;
-              display: block;
-              font-style: italic;
-            }
-            ul { 
-              margin: 0.5rem 0 1rem 1.5rem; 
-              padding: 0;
-            }
-            li { 
-              margin-bottom: 0.5rem; 
-              line-height: 1.5;
-            }
-            .skills p {
-              margin: 0.5rem 0;
-            }
-            @media print {
-              @page { 
-                margin: 1cm;
-                size: A4;
-              }
-              body { 
-                padding: 0.5cm;
-                font-size: 12pt;
-                line-height: 1.4;
-              }
-              a { 
-                text-decoration: none; 
-                color: #333;
-              }
-              .section {
-                margin-bottom: 1rem;
-              }
-              .experience {
-                margin-bottom: 1rem;
-              }
-            }
-          </style>
-        </head>
-        <body>
-          ${contentClone.outerHTML}
-          <div style="text-align: center; margin-top: 2rem; padding: 1rem; color: #666; font-size: 0.9rem; border-top: 1px solid #eee;">
-            <p>Generated from samuelbenso.dev - Last updated: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-          </div>
-          <script>
-            // Auto-print when the window loads
-            window.onload = function() {
-              setTimeout(function() {
-                window.print();
-                // Close the window after a short delay to allow printing to start
-                setTimeout(function() {
-                  window.close();
-                }, 100);
-              }, 500);
-            };
-          </script>
-        </body>
-      </html>
-    `;
-
-    // Write content to the new window
-    printWindow.document.open();
-    printWindow.document.write(printContent);
-    printWindow.document.close();
+    setIsDownloading(true);
     
-    // Focus the window (helps with some browsers)
-    printWindow.focus();
+    try {
+      const element = resumeRef.current;
+      
+      // Create a temporary container for the resume
+      const container = document.createElement('div');
+      container.style.position = 'fixed';
+      container.style.left = '0';
+      container.style.top = '0';
+      container.style.width = '210mm';
+      container.style.padding = '20mm';
+      container.style.background = 'white';
+      container.style.zIndex = '10000';
+      container.style.boxSizing = 'border-box';
+      container.style.visibility = 'hidden'; // Hide the container
+      
+      // Add a style element to control the print layout
+      const style = document.createElement('style');
+      style.textContent = `
+        @page { margin: 0; }
+        body { margin: 0; padding: 0; }
+        * { box-sizing: border-box; }
+        .resume-section { 
+          page-break-inside: avoid;
+          margin-bottom: 1rem;
+        }
+        h2, h3, h4, p, ul, li {
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+        }
+      `;
+      document.head.appendChild(style);
+           
+      // Clone the resume content
+      const clone = element.cloneNode(true);
+      clone.style.all = 'revert';
+      clone.style.width = '100%';
+      clone.style.height = 'auto';
+      clone.style.padding = '0';
+      clone.style.margin = '0';
+      
+      // Add to container and document
+      container.appendChild(clone);
+      document.body.appendChild(container);
+      
+      try {
+        // Initialize PDF
+        const pdf = new jsPDF({
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4'
+        });
+        
+        // Set margins (in mm)
+        const margin = 20;
+        const pageWidth = 210 - (2 * margin);
+        const pageHeight = 297 - (2 * margin);
+        
+        // Function to capture the entire resume in two pages
+        const captureResume = async () => {
+          // First, get the total height of the resume
+          container.style.visibility = 'visible';
+          container.style.height = 'auto';
+          container.style.overflow = 'visible';
+          
+          // Wait for the browser to render the content
+          await new Promise(resolve => setTimeout(resolve, 100));
+          
+          const totalHeight = clone.scrollHeight;
+          const pageHeight = 1122; // A4 height in pixels at 96 DPI (297mm)
+          const firstPageHeight = pageHeight * 0.9; // Leave some margin
+          
+          // Capture first page (top portion)
+          let canvas1 = await html2canvas(clone, {
+            scale: 2,
+            useCORS: true,
+            logging: true,
+            backgroundColor: '#ffffff',
+            height: firstPageHeight,
+            windowHeight: firstPageHeight,
+            y: 0,
+            scrollY: 0,
+            onclone: (clonedDoc) => {
+              // Ensure the cloned document has proper styles
+              const style = document.createElement('style');
+              style.textContent = `
+                @page { margin: 0; }
+                body { margin: 0; padding: 0; }
+                * { box-sizing: border-box; }
+                .resume-section { 
+                  page-break-inside: avoid;
+                  margin-bottom: 0.75rem;
+                }
+                h2, h3, h4, p, ul, li {
+                  margin-top: 0.25rem;
+                  margin-bottom: 0.25rem;
+                }
+              `;
+              clonedDoc.head.appendChild(style);
+            }
+          });
+          
+          // Add first page to PDF
+          const imgWidth1 = pageWidth;
+          const imgHeight1 = (canvas1.height * imgWidth1) / canvas1.width;
+          
+          pdf.addImage(
+            canvas1.toDataURL('image/png', 1.0),
+            'PNG',
+            margin,
+            margin,
+            imgWidth1,
+            imgHeight1
+          );
+          
+          // Add second page if needed
+          if (totalHeight > firstPageHeight) {
+            pdf.addPage();
+            
+            // Capture second page (bottom portion)
+            const canvas2 = await html2canvas(clone, {
+              scale: 2,
+              useCORS: true,
+              logging: true,
+              backgroundColor: '#ffffff',
+              height: totalHeight - firstPageHeight,
+              windowHeight: totalHeight - firstPageHeight,
+              y: firstPageHeight,
+              scrollY: firstPageHeight,
+              onclone: (clonedDoc) => {
+                const style = document.createElement('style');
+                style.textContent = `
+                  @page { margin: 0; }
+                  body { margin: 0; padding: 0; }
+                  * { box-sizing: border-box; }
+                `;
+                clonedDoc.head.appendChild(style);
+              }
+            });
+            
+            // Add second page to PDF
+            const imgWidth2 = pageWidth;
+            const imgHeight2 = (canvas2.height * imgWidth2) / canvas2.width;
+            
+            pdf.addImage(
+              canvas2.toDataURL('image/png', 1.0),
+              'PNG',
+              margin,
+              margin,
+              imgWidth2,
+              imgHeight2
+            );
+          }
+        };
+        
+        // Start capturing the resume in two pages
+        await captureResume();
+        
+        // Save the PDF
+        pdf.save('Samuel_Benson_Resume.pdf');
+        
+      } finally {
+        // Clean up
+        document.body.removeChild(container);
+        // Remove the style element we added
+        if (style && style.parentNode) {
+          style.parentNode.removeChild(style);
+        }
+      }
+      
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      alert('An error occurred while generating the PDF. Please try again.');
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   const openModal = () => setIsOpen(true);
@@ -174,7 +213,6 @@ const ResumeModal = () => {
 
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
-      // Prevent body scroll when modal is open
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -214,13 +252,25 @@ const ResumeModal = () => {
                   onClick={downloadResume}
                   className={styles.downloadButton}
                   aria-label="Download resume as PDF"
+                  disabled={isDownloading}
                 >
-                  <span>📄</span> Download PDF
+                  {isDownloading ? 'Generating...' : (
+                    <>
+                      <span>📄</span> Download PDF
+                    </>
+                  )}
+                </button>
+                <button 
+                  onClick={closeModal}
+                  className={styles.closeButton}
+                  aria-label="Close modal"
+                >
+                  &times;
                 </button>
               </div>
             </div>
             <div className={styles.modalBody}>
-              <div ref={resumeRef}>
+              <div ref={resumeRef} className={styles.resumeContainer}>
                 <Resume />
               </div>
             </div>
