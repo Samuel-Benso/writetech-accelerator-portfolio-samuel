@@ -44,3 +44,88 @@
 .hero__subtitle {
   white-space: pre-line; /* respects \n as line breaks */
 }
+
+/* Module Grid Styles */
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 996px) {
+  .moduleGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Module Card Styles */
+.moduleCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  overflow: hidden;
+}
+
+.moduleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.moduleCardContent {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleCardTitle {
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.moduleCardDescription {
+  color: var(--ifm-font-color-base);
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.moduleCardFooter {
+  margin-top: auto;
+}
+
+.moduleCardLink {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.moduleCardLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
+.moduleCardLink::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.moduleCardLink:hover::after {
+  transform: translateX(4px);
+}

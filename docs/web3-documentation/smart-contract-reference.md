@@ -1,11 +1,11 @@
 ---
 id: smart-contract-reference
 title: Uniswap V3 Smart Contract Reference
+description: Reference documentation for Uniswap V3 smart contracts
 sidebar_position: 3
 ---
 
 This page documents the core smart contracts powering Uniswap V3, a decentralized exchange (DEX) protocol. It enables users to swap tokens (trade one cryptocurrency for another) and provide liquidity (deposit token pairs to earn trading fees).
-
 ## Core Contract Addresses
 
 ### Mainnet (Ethereum)

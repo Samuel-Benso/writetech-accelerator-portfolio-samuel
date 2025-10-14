@@ -19,7 +19,15 @@ const config = {
   projectName: 'docusaurus', // Update this later for deployment
 
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    mermaid: true,
+    format: 'detect',
+    mdx1Compat: {
+      comments: true,
+      admonitions: true,
+      headingIds: true,
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -143,7 +151,7 @@ const config = {
             },
             {
               type: 'doc',
-              docId: 'web3/getting-started',
+              docId: 'web3-documentation/getting-started',
               label: 'Web3 Documentation',
             },
           ],

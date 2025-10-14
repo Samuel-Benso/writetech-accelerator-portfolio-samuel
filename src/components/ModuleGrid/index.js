@@ -1,6 +1,6 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import clsx from 'clsx';
-import ModuleCard from '../ModuleCard';
 import styles from './styles.module.css';
 
 const modules = [
@@ -36,17 +36,35 @@ const modules = [
   }
 ];
 
+function ModuleCard({ title, description, link }) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.cardContent}>
+        <h3 className={styles.cardTitle}>{title}</h3>
+        <p className={styles.cardDescription}>{description}</p>
+        <div className={styles.cardFooter}>
+          <Link to={link} className={styles.cardLink}>
+            View Project
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ModuleGrid() {
   return (
-    <div className={styles.moduleGrid}>
-      {modules.map((module, idx) => (
-        <ModuleCard 
-          key={idx}
-          title={module.title}
-          description={module.description}
-          link={module.link}
-        />
-      ))}
-    </div>
+    <section className={styles.moduleGridContainer}>
+      <div className={styles.moduleGrid}>
+        {modules.map((module, idx) => (
+          <ModuleCard 
+            key={idx}
+            title={module.title}
+            description={module.description}
+            link={module.link}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

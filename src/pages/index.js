@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import SkillsShowcase from '@site/src/components/SkillsShowcase';
+import CompaniesShowcase from '@site/src/components/CompaniesShowcase';
 import ResumeModal from '@site/src/components/ResumeModal';
 import TypingAnimation from '../components/TypingAnimation';
 
@@ -19,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <div className={styles.greeting}>
-              <TypingAnimation text="👋 Hello, I'm" speed={100} />
+              <TypingAnimation text="Hello, I'm" speed={100} />
             </div>
             <Heading as="h1" className={clsx('hero__title', styles.heroTitle)}>
               Samuel Benson
@@ -93,6 +94,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <SkillsShowcase />
+        <CompaniesShowcase />
       </main>
     </Layout>
   );

@@ -1,0 +1,73 @@
+apis:
+  main:
+    root: docs/docs-automation/openapi.yaml
+    styleguide:
+      extends:
+        - recommended
+      rules:
+        info-contact: error
+        info-description: error
+        info-license: error
+        operation-description: warning
+        operation-summary: error
+        operation-operationId: error
+        operation-tags: error
+        tag-description: error
+        path-parameters-defined: error
+        no-ambiguous-paths: error
+        no-http-verbs-in-paths: error
+        no-trailing-slash: error
+        no-script-tags-in-markdown: error
+        no-unused-components: warning
+        security-defined: error
+        oauth2-flows: error
+        boolean-parameter-prefixes: warning
+        property-case-convention: error
+        description-matches-stoplight: warning
+
+theme:
+  colors:
+    primary:
+      main: '#25c2a0'  # Docusaurus teal
+    http:
+      get: '#25c2a0'    # Docusaurus teal
+      post: '#2b7489'   # Docusaurus blue
+      put: '#e3b341'    # Docusaurus yellow
+      delete: '#e8473f' # Docusaurus red
+  typography:
+    fontSize: '14px'
+    lineHeight: '1.6'
+    code:
+      backgroundColor: '#f6f8fa'
+      color: '#2e3440'
+  sidebar:
+    backgroundColor: '#f8f9fa'
+    textColor: '#2e3440'
+    activeTextColor: '#25c2a0'
+    groupItems:
+      activeBackgroundColor: '#e9ecef'
+      activeTextColor: '#25c2a0'
+    level1Items:
+      activeBackgroundColor: '#e9ecef'
+      activeTextColor: '#25c2a0'
+  rightPanel:
+    backgroundColor: '#2e3440'
+    textColor: '#ffffff'
+  codeBlock:
+    backgroundColor: '#f6f8fa'
+  schema:
+    nestedBackground: '#f8f9fa'
+    typeNameColor: '#2e3440'
+    typeTitleColor: '#2e3440'
+    requireLabelColor: '#e8473f'
+    labelsTextSize: '14px'
+  
+overrideTheme:
+  # Add any additional theme overrides here
+  
+referenceComponents:
+  # Custom components for rendering references
+  Schema: './src/components/Schema/Schema.tsx'
+  
+plugins:
+  - '@redocly/docs-docs'

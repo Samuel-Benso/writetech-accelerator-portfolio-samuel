@@ -3,21 +3,197 @@ info:
   title: Chimoney API
   description: API for payments and payouts with Chimoney
   version: 1.0.0
+  contact:
+    name: Chimoney Support
+    email: support@chimoney.io
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
 servers:
   - url: https://api.chimoney.io/v0.2
+    description: Production API server
+
+tags:
+  - name: Wallets
+    description: Operations related to wallet management
+  - name: Payments
+    description: Operations related to sending and receiving payments
+
+components:
+  securitySchemes:
+    X-API-KEY:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+      description: Your Chimoney API key
+    
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+          example: "Error message describing the issue"
+        status:
+          type: string
+          example: "error"
+        data:
+          type: object
+          additionalProperties: true
+
+    WalletBalance:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "user@example.com"
+        balance:
+          type: number
+          format: float
+          example: 1000.50
+        currency:
+          type: string
+          example: "USD"
+
+    PaymentRequest:
+      type: object
+      required:
+        - valueInUSD
+        - receiver
+      properties:
+        valueInUSD:
+          type: number
+          format: float
+          minimum: 0.01
+          example: 10.50
+          description: Amount to send in USD
+        receiver:
+          type: string
+          example: "user@example.com"
+          description: Email or user ID of the recipient
+        wallet:
+          type: string
+          example: "chimoney"
+          description: Type of wallet to use
+        note:
+          type: string
+          example: "Payment for services"
+          description: Optional note about the payment
+
+    PaymentResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "success"
+        data:
+          type: object
+          properties:
+            id:
+              type: string
+              example: "txn_1234567890abcdef"
+            amount:
+              type: number
+              example: 10.5
+            fee:
+              type: number
+              example: 0.5
+            currency:
+              type: string
+              example: "USD"
+            status:
+              type: string
+              example: "success"
+            timestamp:
+              type: string
+              format: date-time
+              example: "2023-01-01T12:00:00Z"
+
 paths:
-  /info:
+  /wallets/balance:
     get:
-      summary: Get API info
-      description: Returns metadata about the Chimoney API.
+      tags:
+        - Wallets
+      summary: Check Wallet Balance
+      description: Retrieve the current balance of a wallet
+      security:
+        - X-API-KEY: []
+      parameters:
+        - name: account
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Email or user ID of the wallet to check
       responses:
         '200':
-          description: Successful response
+          description: Wallet balance retrieved successfully
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  message:
+                  status:
                     type: string
-                    example: "Chimoney API is running"
+                    example: "success"
+                  data:
+                    $ref: '#/components/schemas/WalletBalance'
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Wallet not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /payouts/chimoney:
+    post:
+      tags:
+        - Payments
+      summary: Send Money
+      description: Send money to another Chimoney user or email
+      security:
+        - X-API-KEY: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentRequest'
+      responses:
+        '200':
+          description: Money sent successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentResponse'
+        '400':
+          description: Invalid request body
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '402':
+          description: Insufficient funds
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'

@@ -60,6 +60,10 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center margin-bottom--xl">
+          <h2 className="hero__title">My Documentation Expertise</h2>
+          <p className="hero__subtitle">Delivering high-quality technical content that drives developer success</p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

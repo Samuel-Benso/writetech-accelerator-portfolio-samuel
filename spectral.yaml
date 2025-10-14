@@ -1,0 +1,111 @@
+extends: spectral:oas
+rules:
+  # API Design Rules
+  info-contact: error
+  info-description: error
+  info-license: error
+  info-license-url: error
+  contact-properties: error
+  license-url: error
+  openapi-tags: error
+  openapi-tags-alphabetical: error
+  operation-tags: error
+  operation-description: warning
+  operation-operationId: error
+  operation-operationId-valid-in-url: error
+  operation-summary: error
+  operation-parameters: error
+  operation-2xx-response: warning
+  operation-operationId-unique: error
+  operation-parameters-unique: error
+  operation-tag-defined: error
+  operation-singular-tag: error
+  operation-tag-defined: off  # Disable as we have global tags
+  path-params: error
+  path-parameters-defined: error
+  path-declaration-must-exist: error
+  path-not-include-query: error
+  path-keys-no-trailing-slash: error
+  no-script-tags-in-markdown: error
+  no-$ref-siblings: error
+  no-unused-components: warning
+  no-enum-type-mismatch: error
+  no-invalid-parameter-examples: error
+  no-invalid-schema-examples: error
+  no-ambiguous-paths: error
+  no-http-verbs-in-paths: error
+  no-trailing-slash: error
+  path-excludes-patterns:
+    description: Ensure paths don't include common typos
+    message: "Path contains a common typo: {{error}}."
+    severity: error
+    patterns:
+      - "#/paths/.*/\\.\\.\\."
+      - "#/paths/.*/\\.\\."
+      - "#/paths/.*/\\?"
+      - "#/paths/.*/\\\\"
+      - "#/paths/.*/\\s"
+      - "#/paths/.*/\\t"
+      - "#/paths/.*/\\n"
+
+  # Security Rules
+  security-defined: error
+  oauth2-flows: error
+  oauth2-flows-definition: error
+  oauth2-flows-valid: error
+  oauth2-scopes: error
+  operation-security-defined: error
+  security-recommended: warning
+  security-recommended-oauth2: warning
+  security-recommended-oauth2-scopes: warning
+  security-recommended-oauth2-scopes-format: warning
+  security-recommended-oauth2-scopes-format-oauth2: warning
+
+  # Schema Rules
+  schema: error
+  boolean-parameter-prefixes:
+    description: Suggest to rename boolean parameter to start with is/has/should
+    message: "Boolean parameter '{{property}}' should start with 'is', 'has', or 'should'"
+    severity: warning
+    given: "$..parameters[?(@.schema && @.schema.type === 'boolean')]"
+    then:
+      field: name
+      function: pattern
+      functionOptions:
+        notMatch: "^(is|has|should)[A-Z]"
+
+  # Naming Conventions
+  property-case-convention:
+    description: Property names should be camelCase
+    message: "Property '{{error}}' should be in camelCase"
+    severity: error
+    given: ["$..*[?(@ && @.type === 'object')].properties"]
+    then:
+      field: @key
+      function: casing
+      functionOptions:
+        type: "camel"
+        separator:
+          char: "_"
+          allowLeading: true
+
+  # Documentation Rules
+  description-matches-stoplight:
+    description: Description should be clear and meaningful
+    message: "{{error}}"
+    severity: warning
+    given: ["$..description", "$..summary"]
+    then:
+      function: pattern
+      functionOptions:
+        match: "^[A-Z][^\\n.!?]*[.!?]$"
+
+  # Custom Rules
+  no-single-allof:
+    description: '`allOf` array with single item is redundant'
+    message: '`allOf` array with single item is redundant. Remove the `allOf` and keep the single item.'
+    severity: error
+    recommended: true
+    given: '$..allOf[?(@.length == 1)]'
+    then:
+      function: falsy

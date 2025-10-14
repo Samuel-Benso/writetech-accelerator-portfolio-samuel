@@ -10,7 +10,7 @@ const ModuleCard = ({ title, description, link }) => {
         <p className={styles.cardDescription}>{description}</p>
         <div className={styles.cardFooter}>
           <Link to={link} className={styles.cardLink}>
-            View Project →
+            View Project
           </Link>
         </div>
       </div>
